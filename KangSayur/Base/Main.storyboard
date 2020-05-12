@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4Be-hq-ems" kind="relationship" relationship="viewControllers" id="KV5-bJ-a2c"/>
+                        <segue destination="LSU-Xx-w3n" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="v4P-tB-l8w" kind="relationship" relationship="viewControllers" id="cls-br-OUE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="gQv-We-1Ab">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="v4P-tB-l8w" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profil" image="person.fill" catalog="system" id="36e-Uh-PdS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sx0-p3-fnd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="459" y="414"/>
+        </scene>
+        <!--Subscribe-->
+        <scene sceneID="kIB-7h-TUg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Subscribe" id="4Be-hq-ems" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Langganan" image="list.bullet" catalog="system" id="ZeA-zJ-IXc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QCW-lP-Aqd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302" y="414"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="KTI-gZ-RS1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="History" id="LSU-Xx-w3n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Riwayat" image="clock.fill" catalog="system" id="som-5h-Kl5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0d-uA-EAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="408"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
+</document>
