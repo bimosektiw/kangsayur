@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XrH-Xe-LxY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -54,6 +55,147 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0d-uA-EAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1" y="408"/>
+        </scene>
+        <!--RegisterVC-->
+        <scene sceneID="C6O-Gy-VF8">
+            <objects>
+                <viewController id="XrH-Xe-LxY" customClass="RegisterVC" customModule="KangSayur" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ISw-6v-rQA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hdz-WD-T9d">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Evw-AG-eha"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wpp-iW-9PP"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pb2-Up-7l5">
+                                <rect key="frame" x="32" y="538" width="350" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0k-cW-t80">
+                                        <rect key="frame" x="25" y="33" width="41" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Masukan email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAc-St-gYx">
+                                        <rect key="frame" x="25" y="68" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Hf2-NS-TVZ"/>
+                                            <constraint firstAttribute="width" constant="300" id="Tqm-Pw-Jt3"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="YPM-iQ-fLU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Kata Sandi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-7l-LPK">
+                                        <rect key="frame" x="25" y="123" width="82" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Masukan password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDH-3a-ehg">
+                                        <rect key="frame" x="25" y="152" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NJ9-dS-qGf"/>
+                                            <constraint firstAttribute="width" constant="300" id="t5Z-r1-pgP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woz-Cv-JcW">
+                                        <rect key="frame" x="25" y="200" width="300" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="C0B-PU-xdJ"/>
+                                            <constraint firstAttribute="width" constant="300" id="Qw0-cQ-Txc"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="V0s-Ki-vtM"/>
+                                            <constraint firstAttribute="height" constant="35" id="ufc-Oi-mAh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Masuk">
+                                            <color key="titleColor" red="0.95026273559999996" green="0.94904496009999995" blue="0.97031646569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecb-iy-Odn">
+                                        <rect key="frame" x="25" y="240" width="300" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="1ay-kx-C0D"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="DcE-hh-6OL"/>
+                                            <constraint firstAttribute="width" constant="300" id="MWe-W5-9oB"/>
+                                            <constraint firstAttribute="height" constant="35" id="iOn-cq-apc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Daftar">
+                                            <color key="titleColor" red="0.95026273559999996" green="0.94904496009999995" blue="0.97031646569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="ecb-iy-Odn" firstAttribute="top" secondItem="woz-Cv-JcW" secondAttribute="bottom" constant="5" id="0rL-SI-gGM"/>
+                                    <constraint firstAttribute="height" constant="300" id="5xW-H1-gNk"/>
+                                    <constraint firstItem="woz-Cv-JcW" firstAttribute="top" secondItem="TDH-3a-ehg" secondAttribute="bottom" constant="8" id="6cw-Ba-kLc"/>
+                                    <constraint firstAttribute="trailing" secondItem="eAc-St-gYx" secondAttribute="trailing" constant="25" id="7L8-Qy-vEK"/>
+                                    <constraint firstItem="woz-Cv-JcW" firstAttribute="top" secondItem="TDH-3a-ehg" secondAttribute="bottom" constant="8" id="Irf-rt-Inu"/>
+                                    <constraint firstAttribute="trailing" secondItem="woz-Cv-JcW" secondAttribute="trailing" constant="25" id="Jey-Tg-jiZ"/>
+                                    <constraint firstItem="AtV-7l-LPK" firstAttribute="top" secondItem="eAc-St-gYx" secondAttribute="bottom" constant="15" id="KPr-1b-Kox"/>
+                                    <constraint firstAttribute="bottom" secondItem="ecb-iy-Odn" secondAttribute="bottom" constant="25" id="RhQ-XV-XZm"/>
+                                    <constraint firstItem="AtV-7l-LPK" firstAttribute="leading" secondItem="Pb2-Up-7l5" secondAttribute="leading" constant="25" id="URz-bM-WV6"/>
+                                    <constraint firstItem="ecb-iy-Odn" firstAttribute="leading" secondItem="Pb2-Up-7l5" secondAttribute="leading" constant="25" id="V0A-4L-PbC"/>
+                                    <constraint firstItem="TDH-3a-ehg" firstAttribute="top" secondItem="AtV-7l-LPK" secondAttribute="bottom" constant="8" id="VZG-gx-11L"/>
+                                    <constraint firstItem="eAc-St-gYx" firstAttribute="leading" secondItem="Pb2-Up-7l5" secondAttribute="leading" constant="25" id="YMW-jX-7of"/>
+                                    <constraint firstItem="AtV-7l-LPK" firstAttribute="top" secondItem="eAc-St-gYx" secondAttribute="bottom" constant="15" id="YbH-KM-FKu"/>
+                                    <constraint firstItem="y0k-cW-t80" firstAttribute="leading" secondItem="Pb2-Up-7l5" secondAttribute="leading" constant="25" id="i74-Vl-VCP"/>
+                                    <constraint firstItem="eAc-St-gYx" firstAttribute="top" secondItem="y0k-cW-t80" secondAttribute="bottom" constant="10" id="mdf-05-0ad"/>
+                                    <constraint firstItem="y0k-cW-t80" firstAttribute="top" secondItem="Pb2-Up-7l5" secondAttribute="top" constant="33" id="mgv-eI-7IA"/>
+                                    <constraint firstItem="woz-Cv-JcW" firstAttribute="leading" secondItem="Pb2-Up-7l5" secondAttribute="leading" constant="25" id="swA-RZ-LMk"/>
+                                    <constraint firstItem="TDH-3a-ehg" firstAttribute="top" secondItem="AtV-7l-LPK" secondAttribute="bottom" constant="8" id="uSV-uP-7Ua"/>
+                                    <constraint firstItem="ecb-iy-Odn" firstAttribute="top" secondItem="woz-Cv-JcW" secondAttribute="bottom" constant="5" id="ulx-R8-njV"/>
+                                    <constraint firstAttribute="trailing" secondItem="ecb-iy-Odn" secondAttribute="trailing" constant="25" id="w9n-0c-yfp"/>
+                                    <constraint firstAttribute="trailing" secondItem="TDH-3a-ehg" secondAttribute="trailing" constant="25" id="wsA-sR-tKG"/>
+                                    <constraint firstItem="TDH-3a-ehg" firstAttribute="leading" secondItem="Pb2-Up-7l5" secondAttribute="leading" constant="25" id="x4K-5o-6gy"/>
+                                </constraints>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="mLC-Ys-1K5">
+                                <rect key="frame" x="187" y="491" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengalaman Baru Berbelanja Di Tukang Sayur" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyN-Vt-eh4">
+                                <rect key="frame" x="35" y="208" width="250" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="e9c-3y-ZBy"/>
+                                    <constraint firstAttribute="width" constant="250" id="uWQ-h6-KsB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" red="0.95026273559999996" green="0.94904496009999995" blue="0.97031646569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pb2-Up-7l5" firstAttribute="leading" secondItem="N1J-ub-lDR" secondAttribute="leading" constant="32" id="DQq-Ls-xSk"/>
+                            <constraint firstItem="N1J-ub-lDR" firstAttribute="trailing" secondItem="Pb2-Up-7l5" secondAttribute="trailing" constant="32" id="ERo-RM-bgv"/>
+                            <constraint firstItem="Pb2-Up-7l5" firstAttribute="top" secondItem="oyN-Vt-eh4" secondAttribute="bottom" constant="30" id="VUj-3j-boe"/>
+                            <constraint firstItem="oyN-Vt-eh4" firstAttribute="leading" secondItem="N1J-ub-lDR" secondAttribute="leading" constant="35" id="dfy-JD-fzi"/>
+                            <constraint firstItem="Pb2-Up-7l5" firstAttribute="top" secondItem="mLC-Ys-1K5" secondAttribute="bottom" constant="10" id="yzp-qN-QJD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N1J-ub-lDR"/>
+                    </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="woz-Cv-JcW" id="to6-AL-FZ0"/>
+                        <outlet property="LoginRegisterCardView" destination="Pb2-Up-7l5" id="De9-nK-MKL"/>
+                        <outlet property="PageControl" destination="mLC-Ys-1K5" id="BU0-LY-ghi"/>
+                        <outlet property="RegisterButton" destination="ecb-iy-Odn" id="Phz-qe-Etg"/>
+                        <outlet property="ScrollView" destination="Hdz-WD-T9d" id="XTe-jd-EfD"/>
+                        <outlet property="onboardingTitleLabel" destination="oyN-Vt-eh4" id="Qmh-TH-GwB"/>
+                        <outlet property="passwordTextField" destination="TDH-3a-ehg" id="jEN-wF-2T8"/>
+                        <outlet property="usernameTextField" destination="eAc-St-gYx" id="7zg-v9-BJl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBF-tw-5sn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-671.01449275362324" y="-1.3392857142857142"/>
         </scene>
     </scenes>
     <resources>
