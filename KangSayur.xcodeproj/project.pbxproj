@@ -22,6 +22,7 @@
 		3716C48B246ADCE4005D7689 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48A246ADCE4005D7689 /* RegisterVC.swift */; };
 		3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48C246ADD05005D7689 /* InventoryVC.swift */; };
 		3716C48F246ADD26005D7689 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48E246ADD26005D7689 /* CartVC.swift */; };
+		AD137D8624738EAD009E9640 /* RegisterLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD137D8524738EAD009E9640 /* RegisterLogin.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		3716C48A246ADCE4005D7689 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		3716C48C246ADD05005D7689 /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		3716C48E246ADD26005D7689 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		AD137D8524738EAD009E9640 /* RegisterLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				3716C48A246ADCE4005D7689 /* RegisterVC.swift */,
+				AD137D8524738EAD009E9640 /* RegisterLogin.storyboard */,
 			);
 			path = RegisterLogin;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				3716C40D246A3993005D7689 /* LaunchScreen.storyboard in Resources */,
 				3716C40A246A3993005D7689 /* Assets.xcassets in Resources */,
 				3716C479246ACF39005D7689 /* Profile.storyboard in Resources */,
+				AD137D8624738EAD009E9640 /* RegisterLogin.storyboard in Resources */,
 				3716C489246AD5AD005D7689 /* Main.storyboard in Resources */,
 				3716C47B246ACFFA005D7689 /* History.storyboard in Resources */,
 				3716C487246AD56C005D7689 /* Subscribe.storyboard in Resources */,
