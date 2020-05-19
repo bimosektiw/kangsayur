@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterVC: UIViewController, UIScrollViewDelegate {
+class RegisterVC: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
 
     @IBOutlet var ScrollView: UIScrollView! //set ScrollView buat onboarding
     @IBOutlet weak var PageControl: UIPageControl!
@@ -46,28 +46,40 @@ class RegisterVC: UIViewController, UIScrollViewDelegate {
         RegisterButton.backgroundColor = UIColor(red: 0.05, green: 0.10, blue: 0.07, alpha: 1.00)
         RegisterButton.setTitleColor(.white, for: .normal)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
        
     
     override func viewDidLoad() {
+        //setting keyboard
+        self.usernameTextField.delegate = self //usernameTextField
+        self.passwordTextField.delegate = self //passwordTexField
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        //keyboard masuk, layout naik turun
         
         setupLoginRegisterCardView()
         setupRegisterButton()
         setupLoginButton()
         
-        
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         self.view.layoutIfNeeded() //nge aktifin settingan size
-        
         self.ScrollView.delegate = self
-        ScrollView.isPagingEnabled = true
-        ScrollView.showsVerticalScrollIndicator = false
-        ScrollView.showsHorizontalScrollIndicator = false
+        ScrollView.isPagingEnabled = true //setting pagecontrol
+        ScrollView.showsVerticalScrollIndicator = false //setting pagecontrol
+        ScrollView.showsHorizontalScrollIndicator = false //setting pagecontrol
         
-        var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         
-     
+        var frame = CGRect(x: 0, y: 0, width: 0, height: 0) //sizeFrame ngikutin layar
         
-        for index in 0..<boardingImages.count {
+        for index in 0..<boardingImages.count { //looping dari total onboardingpages
             frame.origin.x = scrollWidth * CGFloat(index)
             frame.size = CGSize(width: scrollWidth, height: scrollHeight)
             
@@ -76,7 +88,7 @@ class RegisterVC: UIViewController, UIScrollViewDelegate {
             let imageView = UIImageView.init(image: UIImage.init(named: boardingImages[index])) //set image yang di looping
             imageView.frame = ScrollView.frame
             imageView.contentMode = .scaleAspectFit
-            imageView.center = CGPoint(x: scrollWidth/2, y: scrollHeight/2)
+            imageView.center = CGPoint(x: scrollWidth/2, y: scrollHeight/2) //cari titik tengahnya programmmatically
             
             slide.addSubview(imageView) //add subview dari image yang udah diset
             ScrollView.addSubview(slide) // set slide yang udah diisi kedalam scroll view
@@ -88,6 +100,25 @@ class RegisterVC: UIViewController, UIScrollViewDelegate {
         PageControl.numberOfPages = boardingImages.count
         PageControl.currentPage = 0
     }
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) { //fungsi buat edit keyboard
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    @objc func dismissKeyboard() {
+         view.endEditing(true)
+     }
     
     //set indikator
     @IBAction func pageChanged(_ sender: Any) {
@@ -117,9 +148,6 @@ class RegisterVC: UIViewController, UIScrollViewDelegate {
         frame.origin.y = 0
         self.ScrollView.scrollRectToVisible(frame, animated: animated)
    }
-    
-   
-
 }
 
 //indicator
