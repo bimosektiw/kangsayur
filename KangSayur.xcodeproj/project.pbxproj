@@ -22,6 +22,10 @@
 		3716C48B246ADCE4005D7689 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48A246ADCE4005D7689 /* RegisterVC.swift */; };
 		3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48C246ADD05005D7689 /* InventoryVC.swift */; };
 		3716C48F246ADD26005D7689 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48E246ADD26005D7689 /* CartVC.swift */; };
+		CD73B7FC247394FD006D0C37 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73B7F8247394FD006D0C37 /* ProductCell.swift */; };
+		CD73B7FD247394FD006D0C37 /* KangSayur.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73B7F9247394FD006D0C37 /* KangSayur.storyboard */; };
+		CD73B7FE247394FD006D0C37 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73B7FA247394FD006D0C37 /* ListItemViewController.swift */; };
+		CD73B7FF247394FD006D0C37 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73B7FB247394FD006D0C37 /* ProductVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		3716C48A246ADCE4005D7689 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		3716C48C246ADD05005D7689 /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		3716C48E246ADD26005D7689 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		CD73B7F8247394FD006D0C37 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		CD73B7F9247394FD006D0C37 /* KangSayur.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KangSayur.storyboard; sourceTree = "<group>"; };
+		CD73B7FA247394FD006D0C37 /* ListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
+		CD73B7FB247394FD006D0C37 /* ProductVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,10 @@
 		3716C418246A3B2A005D7689 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				CD73B7F9247394FD006D0C37 /* KangSayur.storyboard */,
+				CD73B7FA247394FD006D0C37 /* ListItemViewController.swift */,
+				CD73B7F8247394FD006D0C37 /* ProductCell.swift */,
+				CD73B7FB247394FD006D0C37 /* ProductVC.swift */,
 				3716C48E246ADD26005D7689 /* CartVC.swift */,
 			);
 			path = Order;
@@ -209,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3716C40D246A3993005D7689 /* LaunchScreen.storyboard in Resources */,
+				CD73B7FD247394FD006D0C37 /* KangSayur.storyboard in Resources */,
 				3716C40A246A3993005D7689 /* Assets.xcassets in Resources */,
 				3716C479246ACF39005D7689 /* Profile.storyboard in Resources */,
 				3716C489246AD5AD005D7689 /* Main.storyboard in Resources */,
@@ -224,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD73B7FF247394FD006D0C37 /* ProductVC.swift in Sources */,
 				3716C47D246AD101005D7689 /* ProfileVC.swift in Sources */,
 				3716C47F246AD13C005D7689 /* HistoryVC.swift in Sources */,
 				3716C408246A3991005D7689 /* KangSayur.xcdatamodeld in Sources */,
@@ -231,6 +245,8 @@
 				3716C3FC246A3991005D7689 /* AppDelegate.swift in Sources */,
 				3716C48F246ADD26005D7689 /* CartVC.swift in Sources */,
 				3716C48B246ADCE4005D7689 /* RegisterVC.swift in Sources */,
+				CD73B7FE247394FD006D0C37 /* ListItemViewController.swift in Sources */,
+				CD73B7FC247394FD006D0C37 /* ProductCell.swift in Sources */,
 				3716C3FE246A3991005D7689 /* SceneDelegate.swift in Sources */,
 				3716C486246AD56C005D7689 /* SubscribeVC.swift in Sources */,
 			);
