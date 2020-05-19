@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		057EEFBF247369F200C575CE /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057EEFBE247369F200C575CE /* Home.swift */; };
+		057EEFC92473703500C575CE /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057EEFC82473703500C575CE /* Register.swift */; };
 		3716C3FC246A3991005D7689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C3FB246A3991005D7689 /* AppDelegate.swift */; };
 		3716C3FE246A3991005D7689 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C3FD246A3991005D7689 /* SceneDelegate.swift */; };
 		3716C400246A3991005D7689 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C3FF246A3991005D7689 /* FirstViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		057EEFBE247369F200C575CE /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		057EEFC82473703500C575CE /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		3716C3F8246A3991005D7689 /* KangSayur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KangSayur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3716C3FB246A3991005D7689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3716C3FD246A3991005D7689 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				3716C3FD246A3991005D7689 /* SceneDelegate.swift */,
 				3716C3FF246A3991005D7689 /* FirstViewController.swift */,
 				3716C401246A3991005D7689 /* SecondViewController.swift */,
+				057EEFBE247369F200C575CE /* Home.swift */,
+				057EEFC82473703500C575CE /* Register.swift */,
 				3716C403246A3991005D7689 /* Main.storyboard */,
 				3716C409246A3993005D7689 /* Assets.xcassets */,
 				3716C40B246A3993005D7689 /* LaunchScreen.storyboard */,
@@ -196,6 +202,8 @@
 				3716C402246A3991005D7689 /* SecondViewController.swift in Sources */,
 				3716C400246A3991005D7689 /* FirstViewController.swift in Sources */,
 				3716C3FC246A3991005D7689 /* AppDelegate.swift in Sources */,
+				057EEFC92473703500C575CE /* Register.swift in Sources */,
+				057EEFBF247369F200C575CE /* Home.swift in Sources */,
 				3716C3FE246A3991005D7689 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XLV9PG55Q3;
 				INFOPLIST_FILE = KangSayur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XLV9PG55Q3;
 				INFOPLIST_FILE = KangSayur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
