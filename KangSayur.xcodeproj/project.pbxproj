@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		059CEBB224739B99009E796E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059CEBB124739B99009E796E /* Register.storyboard */; };
 		3716C3FC246A3991005D7689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C3FB246A3991005D7689 /* AppDelegate.swift */; };
 		3716C3FE246A3991005D7689 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C3FD246A3991005D7689 /* SceneDelegate.swift */; };
 		3716C408246A3991005D7689 /* KangSayur.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3716C406246A3991005D7689 /* KangSayur.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		059CEBB124739B99009E796E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		3716C3F8246A3991005D7689 /* KangSayur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KangSayur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3716C3FB246A3991005D7689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3716C3FD246A3991005D7689 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		3716C414246A39A7005D7689 /* RegisterLogin */ = {
 			isa = PBXGroup;
 			children = (
+				059CEBB124739B99009E796E /* Register.storyboard */,
 				3716C48A246ADCE4005D7689 /* RegisterVC.swift */,
 			);
 			path = RegisterLogin;
@@ -210,6 +213,7 @@
 			files = (
 				3716C40D246A3993005D7689 /* LaunchScreen.storyboard in Resources */,
 				3716C40A246A3993005D7689 /* Assets.xcassets in Resources */,
+				059CEBB224739B99009E796E /* Register.storyboard in Resources */,
 				3716C479246ACF39005D7689 /* Profile.storyboard in Resources */,
 				3716C489246AD5AD005D7689 /* Main.storyboard in Resources */,
 				3716C47B246ACFFA005D7689 /* History.storyboard in Resources */,
@@ -371,6 +375,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XLV9PG55Q3;
 				INFOPLIST_FILE = KangSayur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,6 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XLV9PG55Q3;
 				INFOPLIST_FILE = KangSayur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
