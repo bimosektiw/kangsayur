@@ -23,6 +23,8 @@
 		3716C48B246ADCE4005D7689 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48A246ADCE4005D7689 /* RegisterVC.swift */; };
 		3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48C246ADD05005D7689 /* InventoryVC.swift */; };
 		3716C48F246ADD26005D7689 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48E246ADD26005D7689 /* CartVC.swift */; };
+		AD6618032474E783005C2EB6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6618022474E783005C2EB6 /* Login.storyboard */; };
+		ADD8C5682474E4E500CE8EF5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		3716C48A246ADCE4005D7689 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		3716C48C246ADD05005D7689 /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		3716C48E246ADD26005D7689 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		AD6618022474E783005C2EB6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 				3716C415246A39BC005D7689 /* Base */,
 				3716C414246A39A7005D7689 /* RegisterLogin */,
 				3716C3FB246A3991005D7689 /* AppDelegate.swift */,
+				ADD8C5692474E4EE00CE8EF5 /* Login */,
 				3716C3FD246A3991005D7689 /* SceneDelegate.swift */,
 				3716C409246A3993005D7689 /* Assets.xcassets */,
 				3716C40B246A3993005D7689 /* LaunchScreen.storyboard */,
@@ -153,6 +158,15 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		ADD8C5692474E4EE00CE8EF5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AD6618022474E783005C2EB6 /* Login.storyboard */,
+				ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +229,7 @@
 				3716C40A246A3993005D7689 /* Assets.xcassets in Resources */,
 				059CEBB224739B99009E796E /* Register.storyboard in Resources */,
 				3716C479246ACF39005D7689 /* Profile.storyboard in Resources */,
+				AD6618032474E783005C2EB6 /* Login.storyboard in Resources */,
 				3716C489246AD5AD005D7689 /* Main.storyboard in Resources */,
 				3716C47B246ACFFA005D7689 /* History.storyboard in Resources */,
 				3716C487246AD56C005D7689 /* Subscribe.storyboard in Resources */,
@@ -232,6 +247,7 @@
 				3716C47F246AD13C005D7689 /* HistoryVC.swift in Sources */,
 				3716C408246A3991005D7689 /* KangSayur.xcdatamodeld in Sources */,
 				3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */,
+				ADD8C5682474E4E500CE8EF5 /* LoginVC.swift in Sources */,
 				3716C3FC246A3991005D7689 /* AppDelegate.swift in Sources */,
 				3716C48F246ADD26005D7689 /* CartVC.swift in Sources */,
 				3716C48B246ADCE4005D7689 /* RegisterVC.swift in Sources */,

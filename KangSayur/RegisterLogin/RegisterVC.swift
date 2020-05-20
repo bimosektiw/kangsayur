@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class RegisterVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
         @IBOutlet var imageView: UIImageView!
