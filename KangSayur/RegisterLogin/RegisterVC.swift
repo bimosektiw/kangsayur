@@ -9,6 +9,8 @@
 import UIKit
 
 class RegisterVC: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
+    
+   
 
     @IBOutlet var ScrollView: UIScrollView! //set ScrollView buat onboarding
     @IBOutlet weak var PageControl: UIPageControl!
@@ -54,6 +56,7 @@ class RegisterVC: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
        
     
     override func viewDidLoad() {
+        
         //setting keyboard
         self.usernameTextField.delegate = self //usernameTextField
         self.passwordTextField.delegate = self //passwordTexField
@@ -99,6 +102,11 @@ class RegisterVC: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
         self.ScrollView.contentSize.height = 1.0
         PageControl.numberOfPages = boardingImages.count
         PageControl.currentPage = 0
+    }
+    
+    
+    @IBAction func Login(_ sender: Any) {
+        performSegue(withIdentifier: "LoginSegue", sender: self)
     }
     
     

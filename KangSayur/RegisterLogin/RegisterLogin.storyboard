@@ -10,7 +10,7 @@
         <!--RegisterVC-->
         <scene sceneID="hSB-wX-VyQ">
             <objects>
-                <viewController id="rlV-xn-W36" customClass="RegisterVC" customModule="KangSayur" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterLoginView" id="rlV-xn-W36" customClass="RegisterVC" customModule="KangSayur" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e2o-nS-JbX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,9 @@
                                                 <state key="normal" title="Masuk">
                                                     <color key="titleColor" red="0.95026273559999996" green="0.94904496009999995" blue="0.97031646569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="Login:" destination="rlV-xn-W36" eventType="touchUpInside" id="ce0-gl-lKR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xps-ce-Ffi">
                                                 <rect key="frame" x="25" y="240" width="300" height="35"/>
@@ -154,15 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4M-Nw-abJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="74"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="mci-zT-HBb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="xsa-p3-HRM" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14x-HN-JOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="649" y="100"/>
+            <point key="canvasLocation" x="161" y="90"/>
         </scene>
     </scenes>
 </document>
