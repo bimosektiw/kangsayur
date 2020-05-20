@@ -9,7 +9,7 @@
 import UIKit
 
 
-class RegisterVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class RegisterVC: BaseVC, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
         @IBOutlet var imageView: UIImageView!
         @IBOutlet var chooseButton: UIButton!
@@ -17,7 +17,6 @@ class RegisterVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            hideKeyboardWhenTappedAround()
             
             imagePicker.delegate = self
             
@@ -63,18 +62,6 @@ class RegisterVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
             dismiss(animated: true, completion: nil)
         }
         
-}
-
-extension UIViewController {
-        func hideKeyboardWhenTappedAround() {
-            let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-            tap.cancelsTouchesInView = false
-            view.addGestureRecognizer(tap)
-        }
-
-        @objc func dismissKeyboard() {
-            view.endEditing(true)
-        }
 }
 
 extension UIImageView {
