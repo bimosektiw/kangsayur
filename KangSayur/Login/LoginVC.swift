@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
+class LoginVC: BaseVC, UIScrollViewDelegate, UITextFieldDelegate {
     
    
 
@@ -70,9 +70,6 @@ class LoginVC: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
         
         super.viewDidLoad()
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        
         self.view.layoutIfNeeded() //nge aktifin settingan size
         self.ScrollView.delegate = self
         ScrollView.isPagingEnabled = true //setting pagecontrol
@@ -123,10 +120,6 @@ class LoginVC: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
             self.view.frame.origin.y = 0
         }
     }
-    
-    @objc func dismissKeyboard() {
-         view.endEditing(true)
-     }
     
     //set indikator
     @IBAction func pageChanged(_ sender: Any) {

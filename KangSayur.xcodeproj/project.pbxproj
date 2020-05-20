@@ -23,6 +23,7 @@
 		3716C48B246ADCE4005D7689 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48A246ADCE4005D7689 /* RegisterVC.swift */; };
 		3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48C246ADD05005D7689 /* InventoryVC.swift */; };
 		3716C48F246ADD26005D7689 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48E246ADD26005D7689 /* CartVC.swift */; };
+		371933872474FA8900450AF4 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371933862474FA8900450AF4 /* BaseVC.swift */; };
 		AD6618032474E783005C2EB6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6618022474E783005C2EB6 /* Login.storyboard */; };
 		ADD8C5682474E4E500CE8EF5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		3716C48A246ADCE4005D7689 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		3716C48C246ADD05005D7689 /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		3716C48E246ADD26005D7689 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		371933862474FA8900450AF4 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		AD6618022474E783005C2EB6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				3716C488246AD5AD005D7689 /* Main.storyboard */,
+				371933862474FA8900450AF4 /* BaseVC.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3716C47D246AD101005D7689 /* ProfileVC.swift in Sources */,
+				371933872474FA8900450AF4 /* BaseVC.swift in Sources */,
 				3716C47F246AD13C005D7689 /* HistoryVC.swift in Sources */,
 				3716C408246A3991005D7689 /* KangSayur.xcdatamodeld in Sources */,
 				3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */,
