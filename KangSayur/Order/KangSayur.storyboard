@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Item View Controller-->
+        <!--ListItemView-->
         <scene sceneID="XsR-De-avw">
             <objects>
-                <viewController storyboardIdentifier="ListItemView" id="VRI-6W-KeZ" customClass="ListItemViewController" customModule="KangSayur" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListItemView" title="ListItemView" id="VRI-6W-KeZ" customClass="ListItemViewController" customModule="KangSayur" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vyx-FA-X8B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJX-tc-AST">
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJX-tc-AST">
                                             <rect key="frame" x="131" y="258" width="30" height="30"/>
                                             <state key="normal" title="+"/>
                                         </button>
@@ -138,9 +138,9 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
+                                    <outlet property="btnTapMinusAction" destination="YCK-uM-It1" id="oJQ-Si-NCX"/>
+                                    <outlet property="btnTapPlusAction" destination="oJX-tc-AST" id="QzJ-y4-McC"/>
                                     <outlet property="buyQty" destination="GEj-Eg-UhV" id="QlJ-Tw-3sm"/>
-                                    <outlet property="decrementQtyButton" destination="YCK-uM-It1" id="pcl-1K-S78"/>
-                                    <outlet property="incrementQtyButton" destination="oJX-tc-AST" id="9Us-dg-6Vs"/>
                                     <outlet property="productCategory" destination="vmt-K5-KhP" id="tNG-Mr-HjL"/>
                                     <outlet property="productImage" destination="ofc-YH-hFm" id="eEK-Hh-x3z"/>
                                     <outlet property="productName" destination="Jyc-pE-X3h" id="eis-I7-5Rr"/>

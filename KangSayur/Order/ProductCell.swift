@@ -19,6 +19,6 @@ class ProductCell: UICollectionViewCell {
     
     @IBOutlet weak var buyQty: UILabel!
     
-    @IBOutlet weak var decrementQtyButton: UIButton!
-    @IBOutlet weak var incrementQtyButton: UIButton!
+    @IBOutlet weak var btnTapMinusAction: UIButton!
+    @IBOutlet weak var btnTapPlusAction: UIButton!
 }
