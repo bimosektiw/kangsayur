@@ -21,4 +21,12 @@ class ProductCell: UICollectionViewCell {
     
     @IBOutlet weak var btnTapMinusAction: UIButton!
     @IBOutlet weak var btnTapPlusAction: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    static func nib() -> UINib{
+        return UINib(nibName: "ProductCell", bundle: nil)
+    }
 }
