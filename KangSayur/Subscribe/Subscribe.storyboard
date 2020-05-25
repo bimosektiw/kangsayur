@@ -88,6 +88,16 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
+        <!--ListItemView-->
+        <scene sceneID="WNZ-np-Sed">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ListItemView" storyboardName="KangSayur" referencedIdentifier="ListItemView" id="WRw-fu-zch" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ukL-Pw-d7c"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1c-yd-xTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1574" y="156"/>
+        </scene>
         <!--Langganan-->
         <scene sceneID="zVa-rw-LQ2">
             <objects>
