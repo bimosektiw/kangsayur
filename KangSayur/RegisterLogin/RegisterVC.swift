@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import CoreData
 
 
 class RegisterVC: BaseVC, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
         @IBOutlet var imageView: UIImageView!
         @IBOutlet var chooseButton: UIButton!
+        @IBOutlet weak var namaTxt: UITextField!
+        @IBOutlet weak var alamatTxt: UITextField!
+        @IBOutlet weak var teleponTxt: UITextField!
+        @IBOutlet weak var emailTxt: UITextField!
+        @IBOutlet weak var passwordTxt: UITextField!
+    
         var imagePicker = UIImagePickerController()
+        var people: [NSManagedObject] = []
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -38,6 +46,68 @@ class RegisterVC: BaseVC, UINavigationControllerDelegate, UIImagePickerControlle
             }
         }
         
+        func showErrorAlert(){
+            let alert = UIAlertController(title: "Message", message: "Please fill all the information!", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+            namaTxt.text = ""
+            alamatTxt.text = ""
+            teleponTxt.text = ""
+            emailTxt.text = ""
+            passwordTxt.text = ""
+        }
+    
+    func save(name: String, address:String, phone:String, email:String, pass:String) {
+          
+          guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+            return
+          }
+          
+          // 1
+          let managedContext = appDelegate.persistentContainer.viewContext
+          
+          // 2
+          let entity = NSEntityDescription.entity(forEntityName: "Person", in: managedContext)!
+
+          let person = NSManagedObject(entity: entity, insertInto: managedContext)
+          
+          // 3
+          person.setValue(name, forKeyPath: "name")
+          person.setValue(address, forKeyPath: "address")
+          person.setValue(phone, forKeyPath: "phone")
+          person.setValue(email, forKeyPath: "email")
+          person.setValue(pass, forKeyPath: "password")
+
+          
+          // 4
+          do {
+            try managedContext.save()
+            people.append(person)
+            } catch let error as NSError {
+              print("Could not save. \(error), \(error.userInfo)")
+            }
+          }
+    
+        @IBAction func submitBtn(_ sender: Any) {
+            if namaTxt.text == "" || alamatTxt.text == "" || teleponTxt.text == "" || emailTxt.text == "" || passwordTxt.text == "" {
+                showErrorAlert()
+            }else{
+                guard let name = namaTxt.text else { return }
+                guard let address = alamatTxt.text else { return }
+                guard let phone = teleponTxt.text else { return }
+                guard let email = emailTxt.text else { return }
+                guard let pass = passwordTxt.text else { return }
+                self.save(name: name, address: address, phone: phone, email: email, pass: pass)
+                print("all saved")
+                
+                if let imageData = imageView.image?.pngData() {
+                    DataBaseHelper.shareInstance.saveImage(data: imageData)
+                }
+            }
+        }
+    
         @IBAction func btnClicked() {
             if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
                 print("Button capture")
@@ -75,3 +145,22 @@ extension UIImageView {
            self.contentMode = .scaleAspectFill
        }
    }
+
+class DataBaseHelper {
+    
+    static let shareInstance = DataBaseHelper()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    func saveImage(data: Data) {
+        
+        let imageInstance = Person(context: context)
+        imageInstance.img = data
+        
+        do {
+            try context.save()
+                print("Image is saved")
+        } catch {
+            print(error.localizedDescription)
+        }
+   }
+}
