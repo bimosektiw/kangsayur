@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SubscribeVC: UIViewController, UITableViewDataSource, UITableViewDelegate  {
         
@@ -58,7 +59,7 @@ class SubscribeVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         }
         
         func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
-            return "Unsubsribe"
+            return "Unsubscribe"
         }
         
     }

@@ -119,6 +119,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="4Ui-Ju-fGS"/>
                                                 </constraints>
                                                 <state key="normal" title="Submit"/>
+                                                <connections>
+                                                    <action selector="submitBtn:" destination="qJv-al-QbD" eventType="touchUpInside" id="p1X-bT-e6S"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -135,8 +138,13 @@
                         <viewLayoutGuide key="safeArea" id="aM6-62-Yoa"/>
                     </view>
                     <connections>
+                        <outlet property="alamatTxt" destination="ze9-vd-TVy" id="V1k-92-1PA"/>
                         <outlet property="chooseButton" destination="fft-cy-zRN" id="Rkj-t7-gsz"/>
+                        <outlet property="emailTxt" destination="mEl-oa-ar0" id="CMj-hE-4eD"/>
                         <outlet property="imageView" destination="gPe-gN-7bD" id="Dwn-KT-nh5"/>
+                        <outlet property="namaTxt" destination="kOE-5e-IOo" id="lVE-9d-0Jh"/>
+                        <outlet property="passwordTxt" destination="e02-Wi-zzE" id="W6g-yc-B88"/>
+                        <outlet property="teleponTxt" destination="Qp4-2D-8sM" id="74U-lh-6JX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="loA-3A-keh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
