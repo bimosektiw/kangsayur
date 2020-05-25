@@ -58,7 +58,7 @@ class HistoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
-        return "Unsubsribe"
+        return "Delete"
     }
 
         // Do any additional setup after loading the view.
