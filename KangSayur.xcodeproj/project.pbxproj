@@ -22,6 +22,9 @@
 		3716C48B246ADCE4005D7689 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48A246ADCE4005D7689 /* RegisterVC.swift */; };
 		3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48C246ADD05005D7689 /* InventoryVC.swift */; };
 		3716C48F246ADD26005D7689 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48E246ADD26005D7689 /* CartVC.swift */; };
+		936786E524721B1800A764A0 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936786E424721B1800A764A0 /* Cart.storyboard */; };
+		936786E8247398BD00A764A0 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936786E6247398BD00A764A0 /* CartCell.swift */; };
+		936786E9247398BD00A764A0 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936786E7247398BD00A764A0 /* CartCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		3716C48A246ADCE4005D7689 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		3716C48C246ADD05005D7689 /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		3716C48E246ADD26005D7689 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		936786E424721B1800A764A0 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
+		936786E6247398BD00A764A0 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		936786E7247398BD00A764A0 /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				3716C48E246ADD26005D7689 /* CartVC.swift */,
+				936786E424721B1800A764A0 /* Cart.storyboard */,
+				936786E6247398BD00A764A0 /* CartCell.swift */,
+				936786E7247398BD00A764A0 /* CartCell.xib */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -214,6 +223,8 @@
 				3716C489246AD5AD005D7689 /* Main.storyboard in Resources */,
 				3716C47B246ACFFA005D7689 /* History.storyboard in Resources */,
 				3716C487246AD56C005D7689 /* Subscribe.storyboard in Resources */,
+				936786E524721B1800A764A0 /* Cart.storyboard in Resources */,
+				936786E9247398BD00A764A0 /* CartCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3716C47D246AD101005D7689 /* ProfileVC.swift in Sources */,
+				936786E8247398BD00A764A0 /* CartCell.swift in Sources */,
 				3716C47F246AD13C005D7689 /* HistoryVC.swift in Sources */,
 				3716C408246A3991005D7689 /* KangSayur.xcdatamodeld in Sources */,
 				3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */,
@@ -371,6 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XLV9PG55Q3;
 				INFOPLIST_FILE = KangSayur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,6 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XLV9PG55Q3;
 				INFOPLIST_FILE = KangSayur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
