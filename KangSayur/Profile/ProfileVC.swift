@@ -9,10 +9,16 @@
 import UIKit
 
 class ProfileVC: UIViewController {
-
+    
+    @IBOutlet weak var profileSection: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.profileSection.layer.cornerRadius = 22
+        
         // Do any additional setup after loading the view.
     }
     
