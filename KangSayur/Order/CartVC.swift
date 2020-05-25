@@ -20,10 +20,12 @@ class CartVC: UIViewController {
     
     
     
+    var itemorderedd = [Product]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print(itemorderedd)
     }
 
     
