@@ -10,6 +10,11 @@ import UIKit
 
 class ListItemViewController: UIViewController {
     var dummydata = [Product(productName: "Terong", productPrice: 10000, productImage: UIImage(named: "image1")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 0), Product(productName: "Timun", productPrice: 10400, productImage: UIImage(named: "image2")!, productCategory: "Sayuran", productStock: 12, productSatuan: "buah", productBuy: 0), Product(productName: "Ikan Salmon", productPrice: 30000, productImage: UIImage(named: "image3")!, productCategory: "Ikan", productStock: 10, productSatuan: "fillet", productBuy: 0), Product(productName: "Pepaya", productPrice: 12000, productImage: UIImage(named: "image4")!, productCategory: "Buah", productStock: 3, productSatuan: "buah", productBuy: 0), Product(productName: "Daun Pepaya", productPrice: 10400, productImage: UIImage(named: "image5")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 0), Product(productName: "Bawang Merah", productPrice: 10000, productImage: UIImage(named: "image6")!, productCategory: "Bumbu", productStock: 2000, productSatuan: "gr", productBuy: 0)]
+    @IBOutlet weak var namaPedagangLabel: UILabel!
+    var namapedagang: String = "Ibu Sumningrah"
+    @IBOutlet weak var buttonSymbol: UIImageView!
+    @IBOutlet weak var labelTotalBarang: UILabel!
+    @IBOutlet weak var labelTotalHargaBarang: UILabel!
     var totalCost: Int = 0
     var totalItem: Int = 0
     var itemordered: [Product] = []
@@ -21,6 +26,9 @@ class ListItemViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        namaPedagangLabel.text = "Dagangan\n" + namapedagang
+        buttonSymbol.image = UIImage.init(named: "Cart")
+        
 //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
 //
 //        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
@@ -45,6 +53,7 @@ class ListItemViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     @IBAction func goToCartView(_ sender: Any) {
         let fetch = collectionView.indexPathsForVisibleItems
         for index in fetch
@@ -84,6 +93,7 @@ extension ListItemViewController: UICollectionViewDelegate, UICollectionViewData
             
             cell.buyQty.text = String(product.productBuy) +  " " + product.productSatuan
         
+        
         cell.btnTapMinusAction.tag = indexPath.row
          cell.btnTapMinusAction.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
         cell.btnTapPlusAction.tag = indexPath.row
@@ -93,24 +103,28 @@ extension ListItemViewController: UICollectionViewDelegate, UICollectionViewData
     
     @objc func buttonAction(_ sender: UIButton){
         let index = sender.tag
+        let indexPathArray = IndexPath(item: index, section: 0)
                 if dummydata[index].productBuy >= 1{
                         dummydata[index].productBuy = dummydata[index].productBuy - 1
                     totalCost = totalCost - dummydata[index].productPrice
                     totalItem = totalItem - 1
-                    toCartBtn.setTitle(String(totalItem) + " barang Total Harga:     Rp. " + String(totalCost), for: .normal)
+                    labelTotalBarang.text = String(totalItem) + " Barang"
+                    labelTotalHargaBarang.text = "Rp. " + String(totalCost)
                     }
-        collectionView.reloadData()
+        collectionView.reloadItems(at: [indexPathArray])
     }
     
     @objc func buttonAction2(_ sender: UIButton){
         let index = sender.tag
+        let indexPathArray = IndexPath(item: index, section: 0)
         if dummydata[index].productBuy < dummydata[index].productStock{
                         dummydata[index].productBuy = dummydata[index].productBuy + 1
             totalCost = totalCost + dummydata[index].productPrice
             totalItem = totalItem + 1
-            toCartBtn.setTitle(String(totalItem) + " barang Total Harga:     Rp. " + String(totalCost), for: .normal)
+            labelTotalBarang.text = String(totalItem) + " Barang"
+            labelTotalHargaBarang.text = "Rp. " + String(totalCost)
                     }
-        collectionView.reloadData()
+        collectionView.reloadItems(at: [indexPathArray])
     }
 }
 
