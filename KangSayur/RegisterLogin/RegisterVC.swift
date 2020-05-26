@@ -26,6 +26,7 @@ class RegisterVC: BaseVC, UINavigationControllerDelegate, UIImagePickerControlle
         override func viewDidLoad() {
             super.viewDidLoad()
             
+            passwordTxt.isSecureTextEntry = true
             imagePicker.delegate = self
             
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -94,17 +95,42 @@ class RegisterVC: BaseVC, UINavigationControllerDelegate, UIImagePickerControlle
             if namaTxt.text == "" || alamatTxt.text == "" || teleponTxt.text == "" || emailTxt.text == "" || passwordTxt.text == "" {
                 showErrorAlert()
             }else{
-                guard let name = namaTxt.text else { return }
-                guard let address = alamatTxt.text else { return }
-                guard let phone = teleponTxt.text else { return }
-                guard let email = emailTxt.text else { return }
-                guard let pass = passwordTxt.text else { return }
-                self.save(name: name, address: address, phone: phone, email: email, pass: pass)
-                print("all saved")
                 
-                if let imageData = imageView.image?.pngData() {
-                    DataBaseHelper.shareInstance.saveImage(data: imageData)
+                
+                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                    return
                 }
+             
+                let managedContext = appDelegate.persistentContainer.viewContext
+                let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Person")
+                fetchRequest.predicate = NSPredicate(format: "email = %@", "" + emailTxt.text!)
+                
+                do {
+                    let result = try managedContext.fetch(fetchRequest)
+                    if result.count > 0 {
+                            let alert = UIAlertController(title: "Register failed", message: "Email already taken", preferredStyle:.alert)
+                            alert.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
+                            self.present(alert, animated: true)
+                    }else{
+                        guard let name = namaTxt.text else { return }
+                        guard let address = alamatTxt.text else { return }
+                        guard let phone = teleponTxt.text else { return }
+                        guard let email = emailTxt.text else { return }
+                        guard let pass = passwordTxt.text else { return }
+                        self.save(name: name, address: address, phone: phone, email: email, pass: pass)
+                        print("all saved")
+                       
+                       if let imageData = imageView.image?.pngData() {
+                           DataBaseHelper.shareInstance.saveImage(data: imageData)
+                       }
+                       
+                    }
+                } catch let error as NSError {
+                    print ("Could not fetch. \(error)")
+                }
+             
+                
+               
             }
         }
     
@@ -128,7 +154,6 @@ class RegisterVC: BaseVC, UINavigationControllerDelegate, UIImagePickerControlle
             
             imageView.Round()
             imageView.image = pickedImage
-            
             dismiss(animated: true, completion: nil)
         }
         
@@ -139,7 +164,7 @@ extension UIImageView {
 
            self.layer.borderWidth = 1
            self.layer.masksToBounds = false
-           self.layer.borderColor = UIColor.black.cgColor
+//           self.layer.borderColor = UIColor.black.cgColor
            self.layer.cornerRadius = self.frame.height / 2
            self.clipsToBounds = true
            self.contentMode = .scaleAspectFill

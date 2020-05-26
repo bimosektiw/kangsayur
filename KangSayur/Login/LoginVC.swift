@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginVC: BaseVC, UIScrollViewDelegate, UITextFieldDelegate {
     
    
-
+    var people:[NSManagedObject] = []
     @IBOutlet var ScrollView: UIScrollView! //set ScrollView buat onboarding
     @IBOutlet weak var PageControl: UIPageControl!
     @IBOutlet weak var LoginRegisterCardView: UIView!
@@ -56,6 +57,9 @@ class LoginVC: BaseVC, UIScrollViewDelegate, UITextFieldDelegate {
        
     
     override func viewDidLoad() {
+     
+  
+        
         
         //setting keyboard
         self.usernameTextField.delegate = self //usernameTextField
@@ -101,12 +105,53 @@ class LoginVC: BaseVC, UIScrollViewDelegate, UITextFieldDelegate {
         PageControl.currentPage = 0
     }
     
-    
+    //set login button pressed
     @IBAction func Login(_ sender: Any) {
-        performSegue(withIdentifier: "LoginSegue", sender: self)
+        print("login pressed")
+        if usernameTextField.text == ""{
+            //alert if empty or missed matched value
+            let alert = UIAlertController(title: "Login failed", message: "Email/Password cannot be empty", preferredStyle:.alert)
+            alert.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            
+        } else {
+            
+            //fetching user data from coreData
+            
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+              return
+            }
+            
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Person")
+            fetchRequest.predicate = NSPredicate(format: "email = %@", "" + usernameTextField.text!)
+            
+            do {
+                let result = try managedContext.fetch(fetchRequest)
+                if result.count > 0 {
+                    let inputPassword = passwordTextField.text
+                    let passwordFromData = result[0].value(forKey: "password") as! String
+                    
+                    if inputPassword == passwordFromData {
+                        print("login success")
+                        performSegue(withIdentifier: "toHomePage", sender: nil)
+                    }else{
+                        let alert = UIAlertController(title: "Login failed", message: "Wrong email/password", preferredStyle:.alert)
+                        alert.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
+                        self.present(alert, animated: true)
+                    }
+                }else{
+                      let alert = UIAlertController(title: "Login failed", message: "Wrong email/password", preferredStyle:.alert)
+                      alert.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
+                      self.present(alert, animated: true)
+                }
+            } catch let error as NSError {
+                print ("Could not fetch. \(error)")
+            }
+        }
     }
     
-    
+    //set keyboard
     @objc func keyboardWillShow(notification: NSNotification) { //fungsi buat edit keyboard
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
@@ -114,7 +159,7 @@ class LoginVC: BaseVC, UIScrollViewDelegate, UITextFieldDelegate {
             }
         }
     }
-
+    //set keyboard
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0

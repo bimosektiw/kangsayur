@@ -73,6 +73,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="Login:" destination="rlV-xn-W36" eventType="touchUpInside" id="ce0-gl-lKR"/>
+                                                    <segue destination="VwD-PN-Osl" kind="show" identifier="toHomePage" id="L6N-Ld-8O1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xps-ce-Ffi">
@@ -87,6 +88,9 @@
                                                 <state key="normal" title="Daftar">
                                                     <color key="titleColor" red="0.95026273559999996" green="0.94904496009999995" blue="0.97031646569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="8xi-ZO-9gd" kind="show" identifier="toRegister" id="JCD-Oc-65q"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -105,7 +109,6 @@
                                             <constraint firstItem="Ysp-sv-hda" firstAttribute="leading" secondItem="i4s-ES-ErZ" secondAttribute="leading" constant="25" id="JIG-vj-37V"/>
                                             <constraint firstItem="zqn-ep-xQ2" firstAttribute="top" secondItem="79l-JP-Omo" secondAttribute="bottom" constant="8" id="K1z-xa-sIH"/>
                                             <constraint firstItem="Xps-ce-Ffi" firstAttribute="leading" secondItem="i4s-ES-ErZ" secondAttribute="leading" constant="25" id="OWn-vx-gde"/>
-                                            <constraint firstAttribute="height" constant="300" id="RWr-Rb-IRd"/>
                                             <constraint firstAttribute="trailing" secondItem="79l-JP-Omo" secondAttribute="trailing" constant="25" id="Tsq-ED-6yO"/>
                                             <constraint firstItem="7NU-Yx-7Fz" firstAttribute="leading" secondItem="i4s-ES-ErZ" secondAttribute="leading" constant="25" id="UBZ-t3-O15"/>
                                             <constraint firstItem="79l-JP-Omo" firstAttribute="top" secondItem="gfi-34-rdX" secondAttribute="bottom" constant="8" id="hwt-rX-6ae"/>
@@ -115,10 +118,6 @@
                                             <constraint firstAttribute="trailing" secondItem="zqn-ep-xQ2" secondAttribute="trailing" constant="25" id="uuK-RF-Ohm"/>
                                         </constraints>
                                     </view>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="2if-h9-HOq">
-                                        <rect key="frame" x="187" y="491" width="39" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </pageControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengalaman Baru Berbelanja Di Tukang Sayur" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlQ-BZ-73G">
                                         <rect key="frame" x="35" y="208" width="250" height="300"/>
                                         <constraints>
@@ -128,14 +127,21 @@
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                         <color key="textColor" red="0.95026273559999996" green="0.94904496009999995" blue="0.97031646569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
                                     </label>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="2if-h9-HOq">
+                                        <rect key="frame" x="187" y="491" width="39" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="i4s-ES-ErZ" firstAttribute="leading" secondItem="bZI-sU-Qt4" secondAttribute="leading" constant="32" id="8Cy-0k-IUO"/>
                                     <constraint firstItem="vlQ-BZ-73G" firstAttribute="leading" secondItem="bZI-sU-Qt4" secondAttribute="leading" constant="35" id="Cm8-a8-Tq3"/>
+                                    <constraint firstItem="i4s-ES-ErZ" firstAttribute="top" secondItem="vlQ-BZ-73G" secondAttribute="bottom" constant="30" id="Ida-68-KHa"/>
                                     <constraint firstItem="bZI-sU-Qt4" firstAttribute="trailing" secondItem="i4s-ES-ErZ" secondAttribute="trailing" constant="32" id="UtQ-lf-3if"/>
-                                    <constraint firstItem="i4s-ES-ErZ" firstAttribute="top" secondItem="vlQ-BZ-73G" secondAttribute="bottom" constant="30" id="o5B-e0-uOC"/>
+                                    <constraint firstAttribute="bottom" secondItem="i4s-ES-ErZ" secondAttribute="bottom" constant="58" id="dbF-Gi-8Os"/>
                                     <constraint firstItem="i4s-ES-ErZ" firstAttribute="top" secondItem="2if-h9-HOq" secondAttribute="bottom" constant="10" id="rxL-Vb-ZIL"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="bZI-sU-Qt4"/>
@@ -158,6 +164,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4M-Nw-abJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="161" y="90"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="lpO-RA-t6j">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ToRegisterPage" storyboardName="Register" id="8xi-ZO-9gd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vNX-Ck-yF3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obd-Wc-7tS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="104"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="isc-WK-vly">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="VwD-PN-Osl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7Un-5O-edJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxD-1h-QCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="70"/>
         </scene>
     </scenes>
 </document>
