@@ -22,9 +22,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="vwo-lg-tUj">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="243.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftarkan diri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iL-an-msj">
-                                                <rect key="frame" x="112" y="0.0" width="150" height="31.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftarkan diri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iL-an-msj">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="31.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -44,8 +44,8 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="4iL-an-msj" firstAttribute="leading" secondItem="vwo-lg-tUj" secondAttribute="leading" id="C1A-ar-JOk"/>
                                             <constraint firstAttribute="trailing" secondItem="gPe-gN-7bD" secondAttribute="trailing" constant="115" id="c5Q-PZ-Prq"/>
-                                            <constraint firstItem="gPe-gN-7bD" firstAttribute="top" secondItem="4iL-an-msj" secondAttribute="bottom" constant="19" id="eUH-lY-tTx"/>
                                             <constraint firstItem="fft-cy-zRN" firstAttribute="top" secondItem="gPe-gN-7bD" secondAttribute="bottom" constant="19" id="gz3-yA-qdh"/>
                                             <constraint firstItem="gPe-gN-7bD" firstAttribute="leading" secondItem="vwo-lg-tUj" secondAttribute="leading" constant="115" id="lV0-bj-QvN"/>
                                         </constraints>
@@ -62,7 +62,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kOE-5e-IOo">
                                                 <rect key="frame" x="0.0" y="36.5" width="374" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alamat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60q-Ua-l85">
                                                 <rect key="frame" x="0.0" y="72.5" width="374" height="31.5"/>
@@ -73,7 +73,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ze9-vd-TVy">
                                                 <rect key="frame" x="0.0" y="109" width="374" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telepon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpX-4O-5cT">
                                                 <rect key="frame" x="0.0" y="145" width="374" height="31.5"/>
@@ -84,7 +84,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qp4-2D-8sM">
                                                 <rect key="frame" x="0.0" y="181.5" width="374" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbu-A2-2mT">
                                                 <rect key="frame" x="0.0" y="218" width="374" height="31"/>
@@ -106,7 +106,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e02-Wi-zzE">
                                                 <rect key="frame" x="0.0" y="326.5" width="374" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -118,9 +118,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="4Ui-Ju-fGS"/>
                                                 </constraints>
-                                                <state key="normal" title="Submit"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" red="0.95026273559999996" green="0.94904496009999995" blue="0.97031646569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="submitBtn:" destination="qJv-al-QbD" eventType="touchUpInside" id="p1X-bT-e6S"/>
+                                                    <segue destination="ZXH-dD-dI5" kind="presentation" identifier="toHomePage" modalPresentationStyle="fullScreen" id="TQP-bc-Hng"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -144,12 +148,21 @@
                         <outlet property="imageView" destination="gPe-gN-7bD" id="Dwn-KT-nh5"/>
                         <outlet property="namaTxt" destination="kOE-5e-IOo" id="lVE-9d-0Jh"/>
                         <outlet property="passwordTxt" destination="e02-Wi-zzE" id="W6g-yc-B88"/>
+                        <outlet property="submitButton" destination="g8W-Y7-3EN" id="RWo-rB-kHC"/>
                         <outlet property="teleponTxt" destination="Qp4-2D-8sM" id="74U-lh-6JX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="loA-3A-keh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="52" y="76"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="qnw-77-TCg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="ZXH-dD-dI5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qU-Mh-7rC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="76"/>
         </scene>
     </scenes>
     <resources>

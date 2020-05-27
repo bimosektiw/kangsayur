@@ -57,9 +57,15 @@ class LoginVC: BaseVC, UIScrollViewDelegate, UITextFieldDelegate {
        
     
     override func viewDidLoad() {
-     
-  
         
+        let status = UserDefaults.standard.bool(forKey: "status")
+        
+        if status == true {
+           DispatchQueue.main.async {
+               self.performSegue(withIdentifier: "toHomePage", sender: self)
+               print("Segue performed - user defaults returned true!")
+           }
+        }
         
         //setting keyboard
         self.usernameTextField.delegate = self //usernameTextField
@@ -135,6 +141,7 @@ class LoginVC: BaseVC, UIScrollViewDelegate, UITextFieldDelegate {
                     if inputPassword == passwordFromData {
                         print("login success")
                         performSegue(withIdentifier: "toHomePage", sender: nil)
+                        UserDefaults.standard.set(true, forKey: "status")
                     }else{
                         let alert = UIAlertController(title: "Login failed", message: "Wrong email/password", preferredStyle:.alert)
                         alert.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
