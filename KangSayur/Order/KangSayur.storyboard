@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VRI-6W-KeZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9s5-bk-kaj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,23 +7,27 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Heavy.otf">
+            <string>SFProDisplay-Heavy</string>
+        </array>
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Heavy.otf">
+            <string>SFProText-Heavy</string>
+        </array>
+        <array key="SF-Pro-Text-Light.otf">
+            <string>SFProText-Light</string>
+        </array>
+        <array key="SF-Pro-Text-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--cartTest-->
-        <scene sceneID="IN0-mK-KNM">
-            <objects>
-                <viewController title="cartTest" id="kFI-Gs-YNZ" customClass="CartVC" customModule="KangSayur" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eYD-lS-4Gz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="TJz-8f-M8G"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="5mo-Va-WPh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bR9-94-IHn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1239" y="-735"/>
-        </scene>
         <!--ListItemView-->
         <scene sceneID="XsR-De-avw">
             <objects>
@@ -69,7 +73,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="Ubg-TO-fd8"/>
                                                         <constraint firstAttribute="width" constant="153" id="aQn-mZ-5Pf"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -79,7 +83,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="DNP-8v-kdh"/>
                                                         <constraint firstAttribute="width" constant="153" id="h5A-tG-2Nb"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -89,7 +93,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="4mK-X4-js2"/>
                                                         <constraint firstAttribute="width" constant="153" id="tzO-ef-SHy"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -99,7 +103,7 @@
                                                         <constraint firstAttribute="width" constant="153" id="QXw-fb-OFB"/>
                                                         <constraint firstAttribute="height" constant="20" id="UcL-fu-jdG"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -127,7 +131,7 @@
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEj-Eg-UhV">
                                                     <rect key="frame" x="54" y="232" width="55" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -191,12 +195,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMG-ng-sDU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMG-ng-sDU">
                                 <rect key="frame" x="20" y="102" width="374" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="D2n-zX-OaD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Heavy" family="SF Pro Display" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -207,33 +211,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
                                         <connections>
                                             <action selector="goToCartView:" destination="VRI-6W-KeZ" eventType="touchUpInside" id="M5u-58-O4K"/>
-                                            <segue destination="kFI-Gs-YNZ" kind="show" identifier="cartVC" id="9Dp-Fo-kqM"/>
+                                            <segue destination="tWe-Wx-zIj" kind="show" identifier="cartVC" id="XUB-cm-Pkj"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoV-96-CyT">
-                                        <rect key="frame" x="196" y="39" width="100" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoV-96-CyT">
+                                        <rect key="frame" x="186" y="43" width="110" height="17"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="x8h-Jh-HU8"/>
+                                            <constraint firstAttribute="width" constant="110" id="x8h-Jh-HU8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Heavy" family="SF Pro Text" pointSize="14"/>
                                         <color key="textColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Barang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uz-69-MDe">
-                                        <rect key="frame" x="8" y="9" width="100" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="0 Barang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uz-69-MDe">
+                                        <rect key="frame" x="8" y="9" width="100" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="gE5-sT-T2H"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                         <color key="textColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Harga:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj8-jk-Jaq">
-                                        <rect key="frame" x="8" y="39" width="93" height="21"/>
+                                        <rect key="frame" x="8" y="43" width="93" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="93" id="P8N-ny-XCo"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                         <color key="textColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -286,6 +290,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="G62-ke-KN1"/>
                     <connections>
+                        <outlet property="btnView" destination="ccQ-Lz-Iem" id="kgn-AM-chj"/>
                         <outlet property="buttonSymbol" destination="ltU-Z6-ItH" id="dN3-g5-Hvr"/>
                         <outlet property="collectionView" destination="Jtw-0J-liY" id="zRQ-0B-u1U"/>
                         <outlet property="labelTotalBarang" destination="7Uz-69-MDe" id="oCR-tp-64P"/>
@@ -296,7 +301,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lC8-Oq-KUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455.072463768116" y="24.776785714285712"/>
+            <point key="canvasLocation" x="2365.217391304348" y="24.776785714285712"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="c77-dZ-X6j">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="cartVC" storyboardName="Cart" id="tWe-Wx-zIj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uGw-Vm-5Wh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MC1-pb-itB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3158" y="22"/>
         </scene>
         <!--ListItem-->
         <scene sceneID="HQp-EB-Vxe">
@@ -306,25 +321,25 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1L-Ue-NFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2131.8840579710145" y="24.776785714285712"/>
+            <point key="canvasLocation" x="3758" y="646"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="gDc-Qe-n7e">
+        <scene sceneID="kLY-CP-k8C">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="be5-qW-MPE" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9s5-bk-kaj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0b7-oH-Vlo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pld-iV-BOL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="VRI-6W-KeZ" kind="relationship" relationship="rootViewController" id="fdr-bv-sVE"/>
+                        <segue destination="VRI-6W-KeZ" kind="relationship" relationship="rootViewController" id="3io-Zb-sXc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WTy-Mf-M9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NtB-OW-8b4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="635" y="25"/>
+            <point key="canvasLocation" x="1455.072463768116" y="24.776785714285712"/>
         </scene>
     </scenes>
 </document>

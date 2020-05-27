@@ -20,12 +20,20 @@ class CartVC: UIViewController {
     
     
     
-    var itemorderedd = [Product]()
+//    var itemorderedd = [Product]()
+    var totalPrice: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(itemorderedd)
+        print(Testttt().getData())
+        
+        let decimal: Decimal = Decimal(totalPrice)
+        let decimalFormatted = decimal.formattedWithSeparator
+        lblTotalHarga.text = "Rp. " + decimalFormatted
+        lblTukangSayur.text = "Connect sama Pedagang.name"
+        lblNoTelp.text = "Connect sama Pedagang.phone"
+        lblDaerahOperasi.text = "Connect sama Pedagang.address"
     }
 
     
@@ -37,7 +45,7 @@ class CartVC: UIViewController {
 
 extension CartVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return Testttt().getData().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

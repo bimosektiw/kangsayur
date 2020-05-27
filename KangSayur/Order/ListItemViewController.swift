@@ -9,12 +9,14 @@
 import UIKit
 
 class ListItemViewController: UIViewController {
-    var dummydata = [Product(productName: "Terong", productPrice: 10000, productImage: UIImage(named: "image1")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 0), Product(productName: "Timun", productPrice: 10400, productImage: UIImage(named: "image2")!, productCategory: "Sayuran", productStock: 12, productSatuan: "buah", productBuy: 0), Product(productName: "Ikan Salmon", productPrice: 30000, productImage: UIImage(named: "image3")!, productCategory: "Ikan", productStock: 10, productSatuan: "fillet", productBuy: 0), Product(productName: "Pepaya", productPrice: 12000, productImage: UIImage(named: "image4")!, productCategory: "Buah", productStock: 3, productSatuan: "buah", productBuy: 0), Product(productName: "Daun Pepaya", productPrice: 10400, productImage: UIImage(named: "image5")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 0), Product(productName: "Bawang Merah", productPrice: 10000, productImage: UIImage(named: "image6")!, productCategory: "Bumbu", productStock: 2000, productSatuan: "gr", productBuy: 0)]
+    var products = [Product(productName: "Terong", productPrice: 10000, productImage: UIImage(named: "image1")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 0), Product(productName: "Timun", productPrice: 10400, productImage: UIImage(named: "image2")!, productCategory: "Sayuran", productStock: 12, productSatuan: "buah", productBuy: 0), Product(productName: "Ikan Salmon", productPrice: 30000, productImage: UIImage(named: "image3")!, productCategory: "Ikan", productStock: 10, productSatuan: "fillet", productBuy: 0), Product(productName: "Pepaya", productPrice: 12000, productImage: UIImage(named: "image4")!, productCategory: "Buah", productStock: 3, productSatuan: "buah", productBuy: 0), Product(productName: "Daun Pepaya", productPrice: 10400, productImage: UIImage(named: "image5")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 0), Product(productName: "Bawang Merah", productPrice: 10000, productImage: UIImage(named: "image6")!, productCategory: "Bumbu", productStock: 2000, productSatuan: "gr", productBuy: 0), Product(productName: "Bawang Putih", productPrice: 8000, productImage: UIImage(named: "image7")!, productCategory: "Bumbu", productStock: 1000, productSatuan: "gr", productBuy: 0), Product(productName: "Tahu Putih", productPrice: 10000, productImage: UIImage(named: "image8")!, productCategory: "Lauk", productStock: 20, productSatuan: "pcs", productBuy: 0), Product(productName: "Tempe Kotak 250gr", productPrice: 6000, productImage: UIImage(named: "image9")!, productCategory: "Lauk", productStock: 30, productSatuan: "pcs", productBuy: 0), Product(productName: "Brocoly", productPrice: 5000, productImage: UIImage(named: "image10")!, productCategory: "Sayuran", productStock: 15, productSatuan: "x100 gr", productBuy: 0), Product(productName: "Buncis", productPrice: 5000, productImage: UIImage(named: "image11")!, productCategory: "Sayuran", productStock: 10, productSatuan: "ikat", productBuy: 0), Product(productName: "Tomat", productPrice: 3000, productImage: UIImage(named: "image12")!, productCategory: "Sayuran", productStock: 13, productSatuan: "buah", productBuy: 0), Product(productName: "Pisang", productPrice: 16000, productImage: UIImage(named: "image13")!, productCategory: "Buah", productStock: 5, productSatuan: "kg", productBuy: 0), Product(productName: "Udang", productPrice: 8000, productImage: UIImage(named: "image14")!, productCategory: "Seafood", productStock: 20, productSatuan: "gr", productBuy: 0), Product(productName: "Royco Kaldu Ayam", productPrice: 3000, productImage: UIImage(named: "image15")!, productCategory: "Bumbu", productStock: 25, productSatuan: "sachet", productBuy: 0), Product(productName: "Terong", productPrice: 10000, productImage: UIImage(named: "image1")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 0), Product(productName: "Timun", productPrice: 10400, productImage: UIImage(named: "image2")!, productCategory: "Sayuran", productStock: 12, productSatuan: "buah", productBuy: 0), Product(productName: "Ikan Salmon", productPrice: 30000, productImage: UIImage(named: "image3")!, productCategory: "Ikan", productStock: 10, productSatuan: "fillet", productBuy: 0), Product(productName: "Pepaya", productPrice: 12000, productImage: UIImage(named: "image4")!, productCategory: "Buah", productStock: 3, productSatuan: "buah", productBuy: 0), Product(productName: "Daun Pepaya", productPrice: 10400, productImage: UIImage(named: "image5")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 0), Product(productName: "Bawang Merah", productPrice: 10000, productImage: UIImage(named: "image6")!, productCategory: "Bumbu", productStock: 2000, productSatuan: "gr", productBuy: 0), Product(productName: "Bawang Putih", productPrice: 8000, productImage: UIImage(named: "image7")!, productCategory: "Bumbu", productStock: 1000, productSatuan: "gr", productBuy: 0), Product(productName: "Tahu", productPrice: 10000, productImage: UIImage(named: "image8")!, productCategory: "Lauk", productStock: 20, productSatuan: "pcs", productBuy: 0), Product(productName: "Tempe Kotak Besar", productPrice: 15000, productImage: UIImage(named: "image9")!, productCategory: "Lauk", productStock: 30, productSatuan: "pcs", productBuy: 0), Product(productName: "Brocoly", productPrice: 5000, productImage: UIImage(named: "image10")!, productCategory: "Sayuran", productStock: 15, productSatuan: "x100 gr", productBuy: 0), Product(productName: "Buncis", productPrice: 5000, productImage: UIImage(named: "image11")!, productCategory: "Sayuran", productStock: 10, productSatuan: "ikat", productBuy: 0), Product(productName: "Tomat", productPrice: 3000, productImage: UIImage(named: "image12")!, productCategory: "Sayuran", productStock: 13, productSatuan: "buah", productBuy: 0), Product(productName: "Pisang", productPrice: 16000, productImage: UIImage(named: "image13")!, productCategory: "Buah", productStock: 5, productSatuan: "kg", productBuy: 0), Product(productName: "Udang", productPrice: 8000, productImage: UIImage(named: "image14")!, productCategory: "Seafood", productStock: 20, productSatuan: "gr", productBuy: 0), Product(productName: "Royco Kaldu Ayam", productPrice: 3000, productImage: UIImage(named: "image15")!, productCategory: "Bumbu", productStock: 25, productSatuan: "sachet", productBuy: 0)]
+    var dummydata: [Product] = []
     @IBOutlet weak var namaPedagangLabel: UILabel!
-    var namapedagang: String = "Ibu Sumningrah"
+    var namapedagang: String = "2"
     @IBOutlet weak var buttonSymbol: UIImageView!
     @IBOutlet weak var labelTotalBarang: UILabel!
     @IBOutlet weak var labelTotalHargaBarang: UILabel!
+    @IBOutlet weak var btnView: UIView!
     var totalCost: Int = 0
     var totalItem: Int = 0
     var itemordered: [Product] = []
@@ -22,12 +24,42 @@ class ListItemViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        switch namapedagang {
+        case "1":
+            for i in 0...5{
+                dummydata.append(products[i])
+            }
+        case "2":
+            for i in 6...11{
+                dummydata.append(products[i])
+            }
+            
+        case "3":
+            for i in 12...17{
+                           dummydata.append(products[i])
+                       }
+            case "4":
+                for i in 18...23{
+                    dummydata.append(products[i])
+                }
+                
+            case "5":
+                for i in 24...29{
+                               dummydata.append(products[i])
+                           }
+        default:
+            for i in 0...5{
+                dummydata.append(products[i])
+            }
+        }
+        
         collectionView.register(ProductCell.nib(), forCellWithReuseIdentifier: "ProductCell")
         
         collectionView.delegate = self
         collectionView.dataSource = self
         namaPedagangLabel.text = "Dagangan\n" + namapedagang
         buttonSymbol.image = UIImage.init(named: "Cart")
+        btnView.isHidden = true
         
 //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
 //
@@ -66,7 +98,10 @@ class ListItemViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cartVC = segue.destination as? CartVC {
-            cartVC.itemorderedd = self.itemordered        }
+//            cartVC.itemorderedd = self.itemordered
+            Testttt().setData(data: self.itemordered)
+            cartVC.totalPrice = self.totalCost
+        }
     }
 
 }
@@ -87,7 +122,9 @@ extension ListItemViewController: UICollectionViewDelegate, UICollectionViewData
             let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductCell)
             cell.productName.text = product.productName
             cell.productImage.image = product.productImage
-            cell.productPrice.text = "Rp. " + String(product.productPrice) + "/" + product.productSatuan
+        let decimal: Decimal = Decimal(product.productPrice)
+            let decimalFormatted = decimal.formattedWithSeparator
+            cell.productPrice.text = "Rp. " + decimalFormatted + "/" + product.productSatuan
             cell.productStock.text = "Stok: " + String(product.productStock) + " " + product.productSatuan
             cell.productCategory.text = product.productCategory
             
@@ -107,9 +144,14 @@ extension ListItemViewController: UICollectionViewDelegate, UICollectionViewData
                 if dummydata[index].productBuy >= 1{
                         dummydata[index].productBuy = dummydata[index].productBuy - 1
                     totalCost = totalCost - dummydata[index].productPrice
+                    if totalItem == 1 {
+                        btnView.isHidden = true
+                    }
                     totalItem = totalItem - 1
+                    let decimal: Decimal = Decimal(totalCost)
+                    let decimalFormatted = decimal.formattedWithSeparator
                     labelTotalBarang.text = String(totalItem) + " Barang"
-                    labelTotalHargaBarang.text = "Rp. " + String(totalCost)
+                    labelTotalHargaBarang.text = "Rp. " + decimalFormatted
                     }
         collectionView.reloadItems(at: [indexPathArray])
     }
@@ -120,11 +162,20 @@ extension ListItemViewController: UICollectionViewDelegate, UICollectionViewData
         if dummydata[index].productBuy < dummydata[index].productStock{
                         dummydata[index].productBuy = dummydata[index].productBuy + 1
             totalCost = totalCost + dummydata[index].productPrice
+            if totalItem == 0 {
+                btnView.isHidden = false
+            }
             totalItem = totalItem + 1
+            
+            let decimal: Decimal = Decimal(totalCost)
+            let decimalFormatted = decimal.formattedWithSeparator
             labelTotalBarang.text = String(totalItem) + " Barang"
-            labelTotalHargaBarang.text = "Rp. " + String(totalCost)
+            labelTotalHargaBarang.text = "Rp. " + decimalFormatted
                     }
         collectionView.reloadItems(at: [indexPathArray])
     }
 }
+
+
+
 
