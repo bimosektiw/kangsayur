@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05058F25247E63BF009DB059 /* Pedagang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05058F24247E63BF009DB059 /* Pedagang.swift */; };
 		059CEBB224739B99009E796E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059CEBB124739B99009E796E /* Register.storyboard */; };
 		3716C3FC246A3991005D7689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C3FB246A3991005D7689 /* AppDelegate.swift */; };
 		3716C3FE246A3991005D7689 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C3FD246A3991005D7689 /* SceneDelegate.swift */; };
@@ -23,22 +24,23 @@
 		3716C48B246ADCE4005D7689 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48A246ADCE4005D7689 /* RegisterVC.swift */; };
 		3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48C246ADD05005D7689 /* InventoryVC.swift */; };
 		3716C48F246ADD26005D7689 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C48E246ADD26005D7689 /* CartVC.swift */; };
-		B13D9A9A24730AF4005CB8B8 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D9A9924730AF4005CB8B8 /* EditProfileVC.swift */; };
+		371933872474FA8900450AF4 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371933862474FA8900450AF4 /* BaseVC.swift */; };
 		936786E524721B1800A764A0 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936786E424721B1800A764A0 /* Cart.storyboard */; };
 		936786E8247398BD00A764A0 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936786E6247398BD00A764A0 /* CartCell.swift */; };
 		936786E9247398BD00A764A0 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936786E7247398BD00A764A0 /* CartCell.xib */; };
+		AD6618032474E783005C2EB6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6618022474E783005C2EB6 /* Login.storyboard */; };
+		ADD8C5682474E4E500CE8EF5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */; };
+		B13D9A9A24730AF4005CB8B8 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D9A9924730AF4005CB8B8 /* EditProfileVC.swift */; };
 		CD1BCDEE2478C0040075D8ED /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BCDED2478C0040075D8ED /* Product.swift */; };
 		CD70BA9A2477B38F00A9C346 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD70BA992477B38F00A9C346 /* CustomView.swift */; };
 		CD70BA9C2477B3B800A9C346 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD70BA9B2477B3B700A9C346 /* CustomView.xib */; };
 		CD73B7FC247394FD006D0C37 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73B7F8247394FD006D0C37 /* ProductCell.swift */; };
 		CD73B7FD247394FD006D0C37 /* KangSayur.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73B7F9247394FD006D0C37 /* KangSayur.storyboard */; };
 		CD73B7FE247394FD006D0C37 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73B7FA247394FD006D0C37 /* ListItemViewController.swift */; };
-		371933872474FA8900450AF4 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371933862474FA8900450AF4 /* BaseVC.swift */; };
-		AD6618032474E783005C2EB6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6618022474E783005C2EB6 /* Login.storyboard */; };
-		ADD8C5682474E4E500CE8EF5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05058F24247E63BF009DB059 /* Pedagang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedagang.swift; sourceTree = "<group>"; };
 		059CEBB124739B99009E796E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		3716C3F8246A3991005D7689 /* KangSayur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KangSayur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3716C3FB246A3991005D7689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,19 +59,19 @@
 		3716C48A246ADCE4005D7689 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		3716C48C246ADD05005D7689 /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		3716C48E246ADD26005D7689 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
-		B13D9A9924730AF4005CB8B8 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		371933862474FA8900450AF4 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		936786E424721B1800A764A0 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		936786E6247398BD00A764A0 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		936786E7247398BD00A764A0 /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
+		AD6618022474E783005C2EB6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		B13D9A9924730AF4005CB8B8 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		CD1BCDED2478C0040075D8ED /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		CD70BA992477B38F00A9C346 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		CD70BA9B2477B3B700A9C346 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		CD73B7F8247394FD006D0C37 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		CD73B7F9247394FD006D0C37 /* KangSayur.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KangSayur.storyboard; sourceTree = "<group>"; };
 		CD73B7FA247394FD006D0C37 /* ListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
-		371933862474FA8900450AF4 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
-		AD6618022474E783005C2EB6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				3716C40B246A3993005D7689 /* LaunchScreen.storyboard */,
 				3716C40E246A3993005D7689 /* Info.plist */,
 				3716C406246A3991005D7689 /* KangSayur.xcdatamodeld */,
+				05058F24247E63BF009DB059 /* Pedagang.swift */,
 			);
 			path = KangSayur;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				3716C47D246AD101005D7689 /* ProfileVC.swift in Sources */,
 				936786E8247398BD00A764A0 /* CartCell.swift in Sources */,
 				371933872474FA8900450AF4 /* BaseVC.swift in Sources */,
+				05058F25247E63BF009DB059 /* Pedagang.swift in Sources */,
 				3716C47F246AD13C005D7689 /* HistoryVC.swift in Sources */,
 				3716C408246A3991005D7689 /* KangSayur.xcdatamodeld in Sources */,
 				3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */,
