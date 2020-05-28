@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CanReceive {
+    func passDataBack(name: String, address: String, phone: String, email: String, password: String)
+}
+
 class EditProfileVC: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
 
     @IBOutlet weak var nameField: UITextField!
@@ -15,50 +19,42 @@ class EditProfileVC: UIViewController, UITextFieldDelegate, UINavigationControll
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var validationLabel: UILabel!
     @IBOutlet weak var imageField: UIImageView!
     @IBOutlet weak var addPhotoBtn: UIButton!
+    
     var imagePicker = UIImagePickerController()
-    
-    let defaults = UserDefaults.standard
-    
-    struct Keys {
-        static let userName = "username"
-        static let userAddress = "address"
-        static let userPhone = "phone"
-        static let userEmail = "email"
-        static let userPassword = "password"
-    }
+    var delegate:CanReceive?
+    var nameText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        validationLabel.isHidden = true
+        self.imageField.layer.cornerRadius = 64
         hideKeyboardWhenTappedAround()
         
         imagePicker.delegate = self
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    func setProfileImage() {
-        imageField.layer.cornerRadius = imageField.frame.size.height / 2
-        imageField.clipsToBounds = true
+    func showErrorAlert(){
+        let alert = UIAlertController(title: "Message", message: "Please fill all the information!", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+        nameField.text = ""
+        addressField.text = ""
+        phoneField.text = ""
+        emailField.text = ""
+        passwordField.text = ""
     }
     
-    @objc func keyboardWillShow(notification: NSNotification) {
-            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                if self.view.frame.origin.y == 0 {
-                    self.view.frame.origin.y -= keyboardSize.height
-                }
-            }
+    @IBAction func updateBtn(_ sender: Any) {
+        if nameField.text == "" || addressField.text == "" || phoneField.text == "" || emailField.text == "" || passwordField.text == "" {
+            showErrorAlert()
+        }else{
+            delegate?.passDataBack(name: nameField.text!, address: addressField.text!, phone: phoneField.text!, email: emailField.text!, password: passwordField.text!)
+            dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
-
-        @objc func keyboardWillHide(notification: NSNotification) {
-            if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y = 0
-            }
-        }
+    }
         
     @IBAction func addPhotoClicked(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
