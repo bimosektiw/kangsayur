@@ -30,7 +30,7 @@ class CartCell: UITableViewCell {
         self.stepper?.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .touchUpInside)
         
     }
-
+    
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         lblJumlah.text = Int(sender.value).description
         stepperAction?()
@@ -41,7 +41,7 @@ class CartCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

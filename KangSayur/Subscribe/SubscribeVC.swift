@@ -10,14 +10,8 @@ import UIKit
 import CoreData
 
 class SubscribeVC: UIViewController, UITableViewDataSource, UITableViewDelegate  {
-        
-        struct Pedagang {
-               var name: String
-               var address: String
-               var phone: String
-        }
-        
-        var pedagangArray = [Pedagang(name: "Venus", address: "Bumi", phone: "888"), Pedagang(name: "Neng Aerith", address: "Mars", phone: "999")]
+    
+        var pedagangArray: [Pedagang] = []
         
         @IBOutlet weak var tablePedagang: UITableView!
         
@@ -28,7 +22,6 @@ class SubscribeVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             
             tablePedagang.dataSource = self
             tablePedagang.delegate = self
-            
         }
         
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -62,6 +55,14 @@ class SubscribeVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             return "Unsubscribe"
         }
         
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "listSegue",
+            let destination = segue.destination as? ListItemViewController,
+            let Index = tablePedagang.indexPathForSelectedRow?.row
+            {
+                destination.namaLemparan = pedagangArray[Index].name
+            }
+        }
     }
 
     class pedagangTableViewCell: UITableViewCell {

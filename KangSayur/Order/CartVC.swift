@@ -23,7 +23,9 @@ class CartVC: UIViewController {
     var dummyDataInCart = [Product(productName: "Terong", productPrice: 10000, productImage: UIImage(named: "image1")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 2), Product(productName: "Timun", productPrice: 10400, productImage: UIImage(named: "image2")!, productCategory: "Sayuran", productStock: 12, productSatuan: "buah", productBuy: 1)]
     
     
-    var itemorderedd = [Product]()
+    
+//    var itemorderedd = [Product]()
+    var totalPrice: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +36,13 @@ class CartVC: UIViewController {
         imageTukangSayur.roundImage()
         
         // Do any additional setup after loading the view.
-        print(itemorderedd)
+        
+        let decimal: Decimal = Decimal(totalPrice)
+        let decimalFormatted = decimal.formattedWithSeparator
+        lblTotalHarga.text = "Rp. " + decimalFormatted
+        lblTukangSayur.text = Testttt().getPedagangSelected().name
+        lblNoTelp.text = Testttt().getPedagangSelected().phone
+        lblDaerahOperasi.text = Testttt().getPedagangSelected().address
     }
     
 
@@ -46,7 +54,6 @@ class CartVC: UIViewController {
     @IBAction func btnPesanClicked(_ sender: UIButton) {
         performSegue(withIdentifier: "toConfirmedOrder", sender: self)
     }
-    
 }
 
 extension CartVC: UITableViewDelegate, UITableViewDataSource, CartCellDelegate {
