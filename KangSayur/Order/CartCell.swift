@@ -8,22 +8,35 @@
 
 import UIKit
 
+@objc protocol CartCellDelegate{
+    @objc optional func stepperTap()
+}
+
 class CartCell: UITableViewCell {
+
+    @IBOutlet weak var imgGambarBarang: UIImageView!
+    @IBOutlet weak var lblNamaBarang: UILabel!
+    @IBOutlet weak var lblHargaBarang: UILabel!
     
     @IBOutlet weak var lblJumlah: UILabel!
     @IBOutlet weak var stepper: UIStepper!
     
+    weak var delegate: CartCellDelegate?
+    
+    var stepperAction: (()->())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.stepper?.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .touchUpInside)
         
-        stepper.wraps = false
-        stepper.autorepeat = true
-        //max value nanti diganti sesuai sm stock
-        stepper.maximumValue = 10
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         lblJumlah.text = Int(sender.value).description
+        stepperAction?()
+//        if(stepper.value == 0){
+//            lblJumlah.text = "Hapus barang"
+//        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
