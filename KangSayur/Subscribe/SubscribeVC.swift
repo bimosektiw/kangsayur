@@ -11,7 +11,7 @@ import CoreData
 
 class SubscribeVC: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
-        var pedagangArray: [Pedagang] = []
+    var pedagangArray: [Pedagang] = DummyData.init().ListSubscribe()
         
         @IBOutlet weak var tablePedagang: UITableView!
         
@@ -39,7 +39,7 @@ class SubscribeVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             cell.pedagangAddressLb?.text = pedagangArray[indexPath.row].address
             cell.phone?.text = pedagangArray[indexPath.row].phone
             cell.photo.makeRounded()
-            cell.photo?.image = #imageLiteral(resourceName: "Aerith-FFVII-Remake-1200x900")
+            cell.photo?.image = UIImage(named: "profile\(indexPath.row+1)")
             
             return cell
         }
@@ -53,6 +53,10 @@ class SubscribeVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
             return "Unsubscribe"
+        }
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true) //dismiss highlight
         }
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

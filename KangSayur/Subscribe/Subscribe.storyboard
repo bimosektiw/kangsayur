@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DAp-8l-qux">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DAp-8l-qux">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -76,6 +76,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.3411764706" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button" image="plus" catalog="system"/>
+                                <connections>
+                                    <segue destination="BjJ-Ma-5dO" kind="show" identifier="addSubscribeSegue" id="v22-yc-43E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -92,6 +95,16 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
         </scene>
+        <!--AddSubscribe-->
+        <scene sceneID="Iz2-EP-rJJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddSubscribe" id="BjJ-Ma-5dO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="H0P-oE-eaI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kY-4O-wVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2593" y="-88"/>
+        </scene>
         <!--ListItemView-->
         <scene sceneID="WNZ-np-Sed">
             <objects>
@@ -102,11 +115,13 @@
             </objects>
             <point key="canvasLocation" x="2483.3333333333335" y="155.35714285714286"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Langganan-->
         <scene sceneID="yo4-c6-OYy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DAp-8l-qux" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Langganan" image="list.dash" catalog="system" id="lTl-kP-596"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7g5-ZQ-GAI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -124,7 +139,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list.bullet" catalog="system" width="64" height="44"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
 </document>
