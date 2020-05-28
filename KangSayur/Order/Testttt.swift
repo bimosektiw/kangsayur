@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 var itemordered = [Product]()
-var pedagangselected = Pedagang(name: "0", address: "0", phone: "0")
+var pedagangselected = Pedagang(name: "0", address: "0", phone: "0", isSubscribe: true)
 
 class Testttt{
     public func getItemOrdered() -> [Product]

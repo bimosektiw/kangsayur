@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import SwiftUI
 
 @objc protocol CartCellDelegate{
     @objc optional func stepperTap()
 }
 
 class CartCell: UITableViewCell {
+    
 
     @IBOutlet weak var imgGambarBarang: UIImageView!
     @IBOutlet weak var lblNamaBarang: UILabel!
@@ -25,18 +27,26 @@ class CartCell: UITableViewCell {
     
     var stepperAction: (()->())?
     
+    
+//    var dummyDataInCart = [Product(productName: "Terong", productPrice: 10000, productImage: UIImage(named: "image1")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 2), Product(productName: "Timun", productPrice: 10400, productImage: UIImage(named: "image2")!, productCategory: "Sayuran", productStock: 12, productSatuan: "buah", productBuy: 1)]
+//
+//    var tempValue = 0;
+//    var totalPrice = 0;
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.stepper?.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .touchUpInside)
         
+        
     }
     
+    
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
-        lblJumlah.text = Int(sender.value).description
         stepperAction?()
-//        if(stepper.value == 0){
-//            lblJumlah.text = "Hapus barang"
-//        }
+        
+//        self.tempValue = Int(sender.value)
+        lblJumlah.text = Int(sender.value).description
+        //updateResult()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -44,5 +54,7 @@ class CartCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
+
     
 }
