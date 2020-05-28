@@ -28,9 +28,8 @@ class ListItemViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        Testttt().setPedagangSelected(data: Pedagang(name: "4", address: "Kebayoran Lama", phone: "081205920583"))
         switch Testttt().getPedagangSelected().name {
-        case "1":
+        case "Dummy":
             for i in 0...5{
                 dummydata.append(products[i])
             }
@@ -94,7 +93,9 @@ class ListItemViewController: UIViewController {
      */
     
     @IBAction func goToCartView(_ sender: Any) {
+        //literally ini masih bug karena cuman nge load item yang keliatan doang...
         let fetch = collectionView.indexPathsForVisibleItems
+        itemordered = []
         for index in fetch
         {
             if dummydata[index.row].productBuy >= 1 {
@@ -160,12 +161,25 @@ extension ListItemViewController: UICollectionViewDelegate, UICollectionViewData
             labelTotalBarang.text = String(totalItem) + " Barang"
             labelTotalHargaBarang.text = "Rp. " + decimalFormatted
         }
+//        if dummydata[index].productBuy == 0{
+//            for i in 0...itemordered.count-1
+//            {
+//                if dummydata[index].productName == itemordered[i].productName {
+//                    itemordered.remove(at: i)
+//                }
+//            }
+//
+//        }
         collectionView.reloadItems(at: [indexPathArray])
     }
     
     @objc func buttonAction2(_ sender: UIButton){//terpanggil kalau tambah item
         let index = sender.tag
         let indexPathArray = IndexPath(item: index, section: 0)
+//        if dummydata[index].productBuy == 0{
+//            itemordered.append(dummydata[index])
+//
+//        }
         if dummydata[index].productBuy < dummydata[index].productStock{
             dummydata[index].productBuy = dummydata[index].productBuy + 1
             totalCost = totalCost + dummydata[index].productPrice

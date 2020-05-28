@@ -35,6 +35,7 @@ class CartVC: UIViewController {
         
         imageTukangSayur.roundImage()
         
+        dummyDataInCart = Testttt().getItemOrdered()
         // Do any additional setup after loading the view.
         
         let decimal: Decimal = Decimal(totalPrice)
@@ -60,6 +61,7 @@ extension CartVC: UITableViewDelegate, UITableViewDataSource, CartCellDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //nanti diganti dari data yang diambil dari listitem
         return dummyDataInCart.count
+//        return Testttt().getItemOrdered().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,6 +75,7 @@ extension CartVC: UITableViewDelegate, UITableViewDataSource, CartCellDelegate {
         
         //masukin data ke cell
         let itemList = dummyDataInCart[indexPath.row]
+//        let itemList = Testttt().getItemOrdered()[indexPath.row]
         cell.imgGambarBarang?.image = itemList.productImage
         cell.lblNamaBarang?.text = itemList.productName
         cell.lblHargaBarang?.text = "Rp. " + String(itemList.productPrice) + " / " + itemList.productSatuan
