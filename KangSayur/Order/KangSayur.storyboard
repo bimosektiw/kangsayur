@@ -211,7 +211,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
                                         <connections>
                                             <action selector="goToCartView:" destination="VRI-6W-KeZ" eventType="touchUpInside" id="M5u-58-O4K"/>
-                                            <segue destination="tWe-Wx-zIj" kind="show" identifier="cartVC" id="XUB-cm-Pkj"/>
+                                            <segue destination="tWe-Wx-zIj" kind="presentation" identifier="cartVC" id="XUB-cm-Pkj"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoV-96-CyT">
