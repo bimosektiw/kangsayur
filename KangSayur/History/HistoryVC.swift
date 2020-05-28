@@ -17,7 +17,7 @@ class HistoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         var total: String
     }
     
-    var historyArray = [History(name: "John", date: "16/01/2020", order: "500gr tempe, 500gr bawang putih, 12pcs telur, 1pcs kol, 100gr cabe rawit", total: "Rp. 80.000"), History(name: "Mary", date: "24/05/2020", order: "500gr tempe, 500gr bawang putih", total: "Rp. 20.000")]
+    var historyArray = [History(name: "Ibu Sumringah", date: "08/05/2020", order: "500gr tempe, 500gr bawang putih, 12pcs telur, 1pcs kol, 100gr cabe rawit", total: "Total Belanja Rp. 80.000"), History(name: "Ibu Sumringah", date: "07/05/2020", order: "500gr tempe, 500gr bawang putih", total: "Total Belanja Rp. 20.000"), History(name: "Ibu Sumringah", date: "06/05/2020", order: "500gr teri, 500gr bawang merah, 3pcs bawang bombay, 500gr bawang putih, 12pcs telur, 1pcs kol, 100gr cabe rawit, 2pcs tepung serbaguna", total: "Total Belanja Rp. 20.000")]
     
     @IBOutlet weak var historyTable: UITableView!
     
