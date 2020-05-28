@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05058F25247E63BF009DB059 /* Pedagang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05058F24247E63BF009DB059 /* Pedagang.swift */; };
 		059CEBB224739B99009E796E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059CEBB124739B99009E796E /* Register.storyboard */; };
 		3716C3FC246A3991005D7689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C3FB246A3991005D7689 /* AppDelegate.swift */; };
 		3716C3FE246A3991005D7689 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716C3FD246A3991005D7689 /* SceneDelegate.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05058F24247E63BF009DB059 /* Pedagang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedagang.swift; sourceTree = "<group>"; };
 		059CEBB124739B99009E796E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		3716C3F8246A3991005D7689 /* KangSayur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KangSayur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3716C3FB246A3991005D7689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		CDE3C897247E0D73002D62A7 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		CDE3C899247E3505002D62A7 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		CDE3C89B247E67D5002D62A7 /* Testttt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testttt.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 				3716C40B246A3993005D7689 /* LaunchScreen.storyboard */,
 				3716C40E246A3993005D7689 /* Info.plist */,
 				3716C406246A3991005D7689 /* KangSayur.xcdatamodeld */,
+				05058F24247E63BF009DB059 /* Pedagang.swift */,
 			);
 			path = KangSayur;
 			sourceTree = "<group>";
@@ -325,6 +329,7 @@
 				3716C47D246AD101005D7689 /* ProfileVC.swift in Sources */,
 				936786E8247398BD00A764A0 /* CartCell.swift in Sources */,
 				371933872474FA8900450AF4 /* BaseVC.swift in Sources */,
+				05058F25247E63BF009DB059 /* Pedagang.swift in Sources */,
 				3716C47F246AD13C005D7689 /* HistoryVC.swift in Sources */,
 				3716C408246A3991005D7689 /* KangSayur.xcdatamodeld in Sources */,
 				3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */,
@@ -477,7 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XLV9PG55Q3;
+				DEVELOPMENT_TEAM = MX956RXSX2;
 				INFOPLIST_FILE = KangSayur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,7 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XLV9PG55Q3;
+				DEVELOPMENT_TEAM = MX956RXSX2;
 				INFOPLIST_FILE = KangSayur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
