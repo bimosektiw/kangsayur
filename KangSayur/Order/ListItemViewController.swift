@@ -13,6 +13,10 @@ class ListItemViewController: UIViewController {
     var totalCost: Int = 0
     var totalItem: Int = 0
     var itemordered: [Product] = []
+    
+    //Var lemparan dari venus
+    var namaLemparan = String()
+    
     @IBOutlet weak var toCartBtn: UIButton!
     @IBOutlet var collectionView: UICollectionView!
     override func viewDidLoad() {
