@@ -32,11 +32,20 @@
 		ADD8C5682474E4E500CE8EF5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */; };
 		B13D9A9A24730AF4005CB8B8 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D9A9924730AF4005CB8B8 /* EditProfileVC.swift */; };
 		CD1BCDEE2478C0040075D8ED /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BCDED2478C0040075D8ED /* Product.swift */; };
+		CD5F920D247F62EF00ACDCF6 /* Pedagang.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5F920C247F62EF00ACDCF6 /* Pedagang.swift */; };
 		CD70BA9A2477B38F00A9C346 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD70BA992477B38F00A9C346 /* CustomView.swift */; };
 		CD70BA9C2477B3B800A9C346 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD70BA9B2477B3B700A9C346 /* CustomView.xib */; };
 		CD73B7FC247394FD006D0C37 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73B7F8247394FD006D0C37 /* ProductCell.swift */; };
 		CD73B7FD247394FD006D0C37 /* KangSayur.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73B7F9247394FD006D0C37 /* KangSayur.storyboard */; };
 		CD73B7FE247394FD006D0C37 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73B7FA247394FD006D0C37 /* ListItemViewController.swift */; };
+		CDE3C891247DFF94002D62A7 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDE3C88F247DFF3F002D62A7 /* SF-Pro-Text-Bold.otf */; };
+		CDE3C892247DFF97002D62A7 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDE3C88E247DFF3F002D62A7 /* SF-Pro-Text-Light.otf */; };
+		CDE3C893247DFF9A002D62A7 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDE3C890247DFF3F002D62A7 /* SF-Pro-Text-Medium.otf */; };
+		CDE3C894247DFF9C002D62A7 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDE3C88D247DFF3E002D62A7 /* SF-Pro-Text-Regular.otf */; };
+		CDE3C896247E06B6002D62A7 /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDE3C895247E06B6002D62A7 /* SF-Pro-Display-Heavy.otf */; };
+		CDE3C898247E0D73002D62A7 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDE3C897247E0D73002D62A7 /* SF-Pro-Text-Heavy.otf */; };
+		CDE3C89A247E3505002D62A7 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3C899247E3505002D62A7 /* Formatter.swift */; };
+		CDE3C89C247E67D5002D62A7 /* Testttt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3C89B247E67D5002D62A7 /* Testttt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,11 +76,21 @@
 		ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B13D9A9924730AF4005CB8B8 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		CD1BCDED2478C0040075D8ED /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		CD5F920C247F62EF00ACDCF6 /* Pedagang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedagang.swift; sourceTree = "<group>"; };
 		CD70BA992477B38F00A9C346 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		CD70BA9B2477B3B700A9C346 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		CD73B7F8247394FD006D0C37 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		CD73B7F9247394FD006D0C37 /* KangSayur.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KangSayur.storyboard; sourceTree = "<group>"; };
 		CD73B7FA247394FD006D0C37 /* ListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
+		CDE3C88D247DFF3E002D62A7 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		CDE3C88E247DFF3F002D62A7 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		CDE3C88F247DFF3F002D62A7 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		CDE3C890247DFF3F002D62A7 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		CDE3C895247E06B6002D62A7 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		CDE3C897247E0D73002D62A7 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		CDE3C899247E3505002D62A7 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		CDE3C89B247E67D5002D62A7 /* Testttt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testttt.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +123,7 @@
 		3716C3FA246A3991005D7689 /* KangSayur */ = {
 			isa = PBXGroup;
 			children = (
+				CDE3C88C247DFEC4002D62A7 /* fonts */,
 				3716C41A246A47B1005D7689 /* Items */,
 				3716C419246A3B55005D7689 /* Subscribe */,
 				3716C418246A3B2A005D7689 /* Order */,
@@ -173,6 +193,9 @@
 				CD70BA992477B38F00A9C346 /* CustomView.swift */,
 				CD70BA9B2477B3B700A9C346 /* CustomView.xib */,
 				CD1BCDED2478C0040075D8ED /* Product.swift */,
+				CDE3C899247E3505002D62A7 /* Formatter.swift */,
+				CDE3C89B247E67D5002D62A7 /* Testttt.swift */,
+				CD5F920C247F62EF00ACDCF6 /* Pedagang.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -201,6 +224,19 @@
 				ADD8C5672474E4E500CE8EF5 /* LoginVC.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		CDE3C88C247DFEC4002D62A7 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CDE3C88F247DFF3F002D62A7 /* SF-Pro-Text-Bold.otf */,
+				CDE3C88E247DFF3F002D62A7 /* SF-Pro-Text-Light.otf */,
+				CDE3C890247DFF3F002D62A7 /* SF-Pro-Text-Medium.otf */,
+				CDE3C88D247DFF3E002D62A7 /* SF-Pro-Text-Regular.otf */,
+				CDE3C895247E06B6002D62A7 /* SF-Pro-Display-Heavy.otf */,
+				CDE3C897247E0D73002D62A7 /* SF-Pro-Text-Heavy.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,16 +298,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3716C40D246A3993005D7689 /* LaunchScreen.storyboard in Resources */,
+				CDE3C896247E06B6002D62A7 /* SF-Pro-Display-Heavy.otf in Resources */,
 				CD73B7FD247394FD006D0C37 /* KangSayur.storyboard in Resources */,
 				3716C40A246A3993005D7689 /* Assets.xcassets in Resources */,
 				059CEBB224739B99009E796E /* Register.storyboard in Resources */,
 				3716C479246ACF39005D7689 /* Profile.storyboard in Resources */,
 				AD6618032474E783005C2EB6 /* Login.storyboard in Resources */,
+				CDE3C894247DFF9C002D62A7 /* SF-Pro-Text-Regular.otf in Resources */,
 				3716C489246AD5AD005D7689 /* Main.storyboard in Resources */,
+				CDE3C891247DFF94002D62A7 /* SF-Pro-Text-Bold.otf in Resources */,
+				CDE3C893247DFF9A002D62A7 /* SF-Pro-Text-Medium.otf in Resources */,
 				CD70BA9C2477B3B800A9C346 /* CustomView.xib in Resources */,
 				3716C47B246ACFFA005D7689 /* History.storyboard in Resources */,
+				CDE3C898247E0D73002D62A7 /* SF-Pro-Text-Heavy.otf in Resources */,
 				3716C487246AD56C005D7689 /* Subscribe.storyboard in Resources */,
 				936786E524721B1800A764A0 /* Cart.storyboard in Resources */,
+				CDE3C892247DFF97002D62A7 /* SF-Pro-Text-Light.otf in Resources */,
 				936786E9247398BD00A764A0 /* CartCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,11 +333,14 @@
 				3716C47F246AD13C005D7689 /* HistoryVC.swift in Sources */,
 				3716C408246A3991005D7689 /* KangSayur.xcdatamodeld in Sources */,
 				3716C48D246ADD05005D7689 /* InventoryVC.swift in Sources */,
+				CDE3C89C247E67D5002D62A7 /* Testttt.swift in Sources */,
 				ADD8C5682474E4E500CE8EF5 /* LoginVC.swift in Sources */,
 				3716C3FC246A3991005D7689 /* AppDelegate.swift in Sources */,
 				CD70BA9A2477B38F00A9C346 /* CustomView.swift in Sources */,
 				3716C48F246ADD26005D7689 /* CartVC.swift in Sources */,
+				CD5F920D247F62EF00ACDCF6 /* Pedagang.swift in Sources */,
 				3716C48B246ADCE4005D7689 /* RegisterVC.swift in Sources */,
+				CDE3C89A247E3505002D62A7 /* Formatter.swift in Sources */,
 				CD1BCDEE2478C0040075D8ED /* Product.swift in Sources */,
 				CD73B7FE247394FD006D0C37 /* ListItemViewController.swift in Sources */,
 				CD73B7FC247394FD006D0C37 /* ProductCell.swift in Sources */,
