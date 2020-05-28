@@ -9,14 +9,24 @@
 import Foundation
 import UIKit
 
-var panggil = [Product]()
+var itemordered = [Product]()
+var pedagangselected = Pedagang(name: "0", address: "0", phone: "0")
+
 class Testttt{
-    public func getData() -> [Product]
+    public func getItemOrdered() -> [Product]
     {
-        return panggil
+        return itemordered
     }
-    public func setData(data: [Product])
+    public func setItemOrdered(data: [Product])
     {
-        panggil = data
+        itemordered = data
+    }
+    public func getPedagangSelected() -> Pedagang
+    {
+        return pedagangselected
+    }
+    public func setPedagangSelected(data: Pedagang)
+    {
+        pedagangselected = data
     }
 }

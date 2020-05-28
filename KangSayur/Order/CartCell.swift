@@ -9,7 +9,7 @@
 import UIKit
 
 class CartCell: UITableViewCell {
-
+    
     @IBOutlet weak var lblJumlah: UILabel!
     @IBOutlet weak var stepper: UIStepper!
     
@@ -21,14 +21,14 @@ class CartCell: UITableViewCell {
         //max value nanti diganti sesuai sm stock
         stepper.maximumValue = 10
     }
-
+    
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         lblJumlah.text = Int(sender.value).description
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

@@ -20,32 +20,31 @@ class CartVC: UIViewController {
     
     
     
+    
 //    var itemorderedd = [Product]()
     var totalPrice: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-        print(Testttt().getData())
         
         let decimal: Decimal = Decimal(totalPrice)
         let decimalFormatted = decimal.formattedWithSeparator
         lblTotalHarga.text = "Rp. " + decimalFormatted
-        lblTukangSayur.text = "Connect sama Pedagang.name"
-        lblNoTelp.text = "Connect sama Pedagang.phone"
-        lblDaerahOperasi.text = "Connect sama Pedagang.address"
+        lblTukangSayur.text = Testttt().getPedagangSelected().name
+        lblNoTelp.text = Testttt().getPedagangSelected().phone
+        lblDaerahOperasi.text = Testttt().getPedagangSelected().address
     }
 
     
     @IBAction func btnPesanClicked(_ sender: UIButton) {
         
     }
-    
 }
 
 extension CartVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Testttt().getData().count
+        return Testttt().getItemOrdered().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

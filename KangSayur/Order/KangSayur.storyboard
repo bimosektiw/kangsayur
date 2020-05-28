@@ -288,7 +288,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p4q-Xr-Lik"/>
                     </view>
-                    <navigationItem key="navigationItem" id="G62-ke-KN1"/>
+                    <navigationItem key="navigationItem" id="G62-ke-KN1">
+                        <barButtonItem key="backBarButtonItem" title="Kembali" id="Pnc-ou-fNZ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnView" destination="ccQ-Lz-Iem" id="kgn-AM-chj"/>
                         <outlet property="buttonSymbol" destination="ltU-Z6-ItH" id="dN3-g5-Hvr"/>
@@ -331,6 +333,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pld-iV-BOL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
