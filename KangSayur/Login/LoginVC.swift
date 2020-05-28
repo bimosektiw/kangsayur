@@ -58,8 +58,8 @@ class LoginVC: BaseVC, UIScrollViewDelegate, UITextFieldDelegate {
     
     override func viewDidLoad() {
         
+        //check user default lagi ada yang login ato ngga
         let status = UserDefaults.standard.bool(forKey: "status")
-        
         if status == true {
            DispatchQueue.main.async {
                self.performSegue(withIdentifier: "toHomePage", sender: self)
