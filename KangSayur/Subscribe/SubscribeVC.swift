@@ -65,6 +65,7 @@ class SubscribeVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             let Index = tablePedagang.indexPathForSelectedRow?.row
             {
                 destination.namaLemparan = pedagangArray[Index].name
+                Testttt().setPedagangSelected(data: pedagangArray[Index])
             }
         }
     }

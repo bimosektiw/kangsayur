@@ -19,6 +19,21 @@ class ConfirmedOrderVC: UIViewController {
     }
     
     @IBAction func btnKembaliKeLanggananClicked(_ sender: UIButton) {
+        print("masuj")
+//        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//        self.insta
+        
+        let storyboard = UIStoryboard(name: "Subscribe", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "subsVC") as UIViewController
+        present(vc, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "subsSegue",
+        let destination = segue.destination as? SubscribeVC
+        {
+            
+        }
     }
     
     /*

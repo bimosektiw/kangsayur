@@ -48,9 +48,9 @@ class CartVC: UIViewController {
         lblTotalHarga.text = "Rp. " + decimalFormatted
         
         //cek lagi
-//        lblTukangSayur.text = Testttt().getPedagangSelected().name
-//        lblNoTelp.text = Testttt().getPedagangSelected().phone
-//        lblDaerahOperasi.text = Testttt().getPedagangSelected().address
+        lblTukangSayur.text = Testttt().getPedagangSelected().name
+        lblNoTelp.text = Testttt().getPedagangSelected().phone
+        lblDaerahOperasi.text = Testttt().getPedagangSelected().address
     }
     
         func initialCalculation (){

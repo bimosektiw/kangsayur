@@ -144,7 +144,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5O-TI-Zud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847.82608695652175" y="-123.21428571428571"/>
+            <point key="canvasLocation" x="919" y="-123"/>
+        </scene>
+        <!--subsVC-->
+        <scene sceneID="C8d-RQ-Tc7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Subscribe" referencedIdentifier="subsVC" id="CSQ-VM-ufY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jdI-Bw-G4y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vpp-JJ-X0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="-161"/>
         </scene>
     </scenes>
     <resources>
