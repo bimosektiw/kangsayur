@@ -17,5 +17,6 @@ struct Product{
     var productStock: Int
     var productSatuan: String
     var productBuy: Int
+    var productIndexInCart: Int
 }
 
