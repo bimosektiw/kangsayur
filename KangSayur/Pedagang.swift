@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
 struct Pedagang {
-       var name: String
-       var address: String
-       var phone: String
-       var isSubscribe: Bool
+    var name: String
+    var image: UIImage
+    var address: String
+    var phone: String
+    var isSubscribe: Bool
 }
