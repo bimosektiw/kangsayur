@@ -21,7 +21,7 @@ class CartVC: UIViewController {
     @IBOutlet weak var btnPesan: UIButton!
     
     //dummy data
-    var dummyDataInCart = [Product(productName: "Terong", productPrice: 10000, productImage: UIImage(named: "image1")!, productCategory: "Sayuran", productStock: 3, productSatuan: "kg", productBuy: 2), Product(productName: "Timun", productPrice: 10400, productImage: UIImage(named: "image2")!, productCategory: "Sayuran", productStock: 12, productSatuan: "buah", productBuy: 1)]
+    var dummyDataInCart = Testttt().getItemOrdered()
     
     
 //    var itemorderedd = [Product]()
@@ -48,6 +48,7 @@ class CartVC: UIViewController {
         lblTotalHarga.text = "Rp. " + decimalFormatted
         
         //cek lagi
+        imageTukangSayur.image = Testttt().getPedagangSelected().image
         lblTukangSayur.text = Testttt().getPedagangSelected().name
         lblNoTelp.text = Testttt().getPedagangSelected().phone
         lblDaerahOperasi.text = Testttt().getPedagangSelected().address
@@ -72,7 +73,7 @@ class CartVC: UIViewController {
             showWarningEmptyCart()
         }
         else{
-          performSegue(withIdentifier: "toConfirmedOrder", sender: self)
+            performSegue(withIdentifier: "toConfirmedOrder", sender: self)
         }
     }
 }
