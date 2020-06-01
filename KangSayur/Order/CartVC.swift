@@ -21,7 +21,7 @@ class CartVC: UIViewController {
     @IBOutlet weak var btnPesan: UIButton!
     
     //dummy data
-    var dummyDataInCart = Testttt().getItemOrdered()
+    var dummyDataInCart: [Product] = []
     
     
 //    var itemorderedd = [Product]()

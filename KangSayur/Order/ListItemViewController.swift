@@ -160,6 +160,7 @@ extension ListItemViewController: UICollectionViewDelegate, UICollectionViewData
             }
             totalItem = totalItem - 1
             itemordered[dummydata[index].productIndexInCart].productBuy = dummydata[index].productBuy
+            itemordered[dummydata[index].productIndexInCart].productPrice = dummydata[index].productPrice
             if dummydata[index].productBuy == 0{
                 itemordered.remove(at: dummydata[index].productIndexInCart)
                 for data in 0...dummydata.count - 1
@@ -196,6 +197,7 @@ extension ListItemViewController: UICollectionViewDelegate, UICollectionViewData
             }
             totalItem = totalItem + 1
             itemordered[dummydata[index].productIndexInCart].productBuy = dummydata[index].productBuy
+            itemordered[dummydata[index].productIndexInCart].productPrice = dummydata[index].productPrice
             let decimal: Decimal = Decimal(totalCost)
             let decimalFormatted = decimal.formattedWithSeparator
             labelTotalBarang.text = String(totalItem) + " Barang"
